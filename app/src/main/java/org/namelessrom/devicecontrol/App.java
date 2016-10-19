@@ -22,8 +22,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.PowerManager;
-import android.os.Vibrator;
 import android.support.annotation.WorkerThread;
 import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
@@ -37,7 +35,6 @@ import java.util.HashSet;
 
 import at.amartinz.execution.ShellManager;
 import at.amartinz.universaldebug.UniversalDebug;
-import at.amartinz.universaldebug.fabric.FabricConfig;
 import at.amartinz.universaldebug.fabric.trees.CrashlyticsComponent;
 import at.amartinz.universaldebug.trees.BaseTree;
 import at.amartinz.universaldebug.trees.LogComponent;
@@ -57,9 +54,6 @@ public class App extends android.app.Application {
 
     private CustomTabsHelper customTabsHelper;
 
-    private PowerManager powerManager;
-    private Vibrator vibrator;
-
     public static App get() {
         return App.sInstance;
     }
@@ -75,20 +69,6 @@ public class App extends android.app.Application {
         return customTabsHelper;
     }
 
-    public PowerManager getPowerManager() {
-        if (powerManager == null) {
-            powerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
-        }
-        return powerManager;
-    }
-
-    public Vibrator getVibrator() {
-        if (vibrator == null) {
-            vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        }
-        return vibrator;
-    }
-
     @Override public void onCreate() {
         super.onCreate();
         if (App.sInstance != null) {
@@ -102,12 +82,12 @@ public class App extends android.app.Application {
                 .withDebugTree(buildDebugTree())
                 .withProductionTree(buildProductionTree());
 
-        if (!enableDebug) {
-            final FabricConfig fabricConfig = new FabricConfig(universalDebug)
-                    .withAnswers()
-                    .withCrashlytics();
-            universalDebug.withExtension(fabricConfig);
-        }
+//        if (!enableDebug) {
+//            final FabricConfig fabricConfig = new FabricConfig(universalDebug)
+//                    .withAnswers()
+//                    .withCrashlytics();
+//            universalDebug.withExtension(fabricConfig);
+//        }
 
         universalDebug.install();
         ShellManager.enableDebug(App.enableDebug);

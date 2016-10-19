@@ -30,35 +30,7 @@ public class DeviceConstants {
     // Fragments
     //==============================================================================================
     public static final int ID_HOME = R.id.nav_item_home;
-    //--- INFO
-    public static final int ID_INFO_DEVICE = R.id.nav_item_info_device;
-    public static final int ID_INFO_HARDWARE = R.id.nav_item_info_hardware;
-    public static final int ID_INFO_SOFTWARE = R.id.nav_item_info_software;
-    public static final int ID_INFO_PERFORMANCE = R.id.nav_item_info_performance;
-    //--- CTRL
-    public static final int ID_CTRL_DEVICE = R.id.nav_item_controls_device;
-    public static final int ID_FAST_CHARGE = ID_CTRL_DEVICE + 1000;
-    public static final int ID_SOUND_CONTROL = ID_CTRL_DEVICE + 1100;
-    public static final int ID_KSM = ID_CTRL_DEVICE + 1200;
-    public static final int ID_UKSM = ID_CTRL_DEVICE + 1300;
-    public static final int ID_VOLTAGE = ID_CTRL_DEVICE + 1400;
-    public static final int ID_ENTROPY = ID_CTRL_DEVICE + 1500;
-    public static final int ID_CTRL_PROCESSOR = R.id.nav_item_controls_processor;
-    public static final int ID_GOVERNOR_TUNABLE = ID_CTRL_PROCESSOR + 1000;
-    public static final int ID_CTRL_GRAPHICS = R.id.nav_item_controls_graphics;
-    public static final int ID_CTRL_FILE_SYSTEM = R.id.nav_item_controls_file_system;
-    public static final int ID_IOSCHED_TUNING = ID_CTRL_FILE_SYSTEM + 1000;
-    public static final int ID_CTRL_THERMAL = R.id.nav_item_controls_thermal;
-    //--- TOOLS
-    public static final int ID_TOOLS_BOOTUP_RESTORATION = R.id.nav_item_tools_bootup_restoration;
     public static final int ID_TOOLS_APP_MANAGER = R.id.nav_item_tools_app_manager;
-    public static final int ID_TOOLS_TASKER = R.id.nav_item_tools_tasker;
-    public static final int ID_TOOLS_FLASHER = R.id.nav_item_tools_flasher;
-    public static final int ID_TOOLS_MORE = R.id.nav_item_tools_more;
-    public static final int ID_TOOLS_VM = ID_TOOLS_MORE + 1000;
-    public static final int ID_TOOLS_EDITORS_VM = ID_TOOLS_MORE + 1020;
-    public static final int ID_TOOLS_EDITORS_BUILD_PROP = ID_TOOLS_MORE + 1100;
-    public static final int ID_TOOLS_WIRELESS_FM = ID_TOOLS_MORE + 1300;
     //--- APP INFO
     public static final int ID_APP_INFO_LICENSE = R.id.nav_item_app_info_license;
     public static final int ID_APP_INFO_PRIVACY = R.id.nav_item_app_info_privacy;

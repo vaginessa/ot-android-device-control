@@ -26,73 +26,6 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="@string/drawer_title_home" />
     </group>
-    <!-- information subheader -->
-    <group
-        android:id="@+id/group_information"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_item_info"
-            android:title="@string/drawer_title_info">
-            <menu>
-                <item
-                    android:id="@+id/nav_item_info_device"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_perm_device_information_black_24dp"
-                    android:title="@string/drawer_title_info_device" />
-                <item
-                    android:id="@+id/nav_item_info_hardware"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_devices_other_black_24dp"
-                    android:title="@string/drawer_title_info_hardware" />
-                <item
-                    android:id="@+id/nav_item_info_software"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_code_black_24dp"
-                    android:title="@string/drawer_title_info_software" />
-                <item
-                    android:id="@+id/nav_item_info_performance"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_developer_board_black_24dp"
-                    android:title="@string/drawer_title_info_performance" />
-            </menu>
-        </item>
-    </group>
-    <!-- controls subheader -->
-    <group
-        android:id="@+id/group_controls"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_item_controls"
-            android:title="@string/drawer_title_controls">
-            <menu>
-                <item
-                    android:id="@+id/nav_item_controls_device"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_developer_mode_black_24dp"
-                    android:title="@string/drawer_title_controls_device" />
-                <item
-                    android:id="@+id/nav_item_controls_processor"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_memory_black_24dp"
-                    android:title="@string/drawer_title_controls_processor" />
-                <item
-                    android:id="@+id/nav_item_controls_graphics"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_dvr_black_24dp"
-                    android:title="@string/drawer_title_controls_graphics" />
-                <item
-                    android:id="@+id/nav_item_controls_file_system"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_storage_black_24dp"
-                    android:title="@string/drawer_title_controls_file_system" />
-                <item
-                    android:id="@+id/nav_item_controls_thermal"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_whatshot_black_24dp"
-                    android:title="@string/drawer_title_controls_thermal" />
-            </menu>
-        </item>
-    </group>
     <!-- tools subheader -->
     <group
         android:id="@+id/group_tools"
@@ -102,30 +35,10 @@
             android:title="@string/drawer_title_tools">
             <menu>
                 <item
-                    android:id="@+id/nav_item_tools_bootup_restoration"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_settings_backup_restore_black_24dp"
-                    android:title="@string/drawer_title_tools_bootup_restoration" />
-                <item
                     android:id="@+id/nav_item_tools_app_manager"
                     android:checkable="true"
                     android:icon="@drawable/ic_android_black_24dp"
                     android:title="@string/drawer_title_tools_app_manager" />
-                <item
-                    android:id="@+id/nav_item_tools_tasker"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_extension_black_24dp"
-                    android:title="@string/drawer_title_tools_tasker" />
-                <item
-                    android:id="@+id/nav_item_tools_flasher"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_flash_on_black_24dp"
-                    android:title="@string/drawer_title_tools_flasher" />
-                <item
-                    android:id="@+id/nav_item_tools_more"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_build_black_24dp"
-                    android:title="@string/drawer_title_tools_more" />
             </menu>
         </item>
     </group>

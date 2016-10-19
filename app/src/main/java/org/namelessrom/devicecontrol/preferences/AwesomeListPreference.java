@@ -23,8 +23,6 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 
 import org.namelessrom.devicecontrol.R;
-import org.namelessrom.devicecontrol.models.BootupConfig;
-import org.namelessrom.devicecontrol.modules.bootup.BootupItem;
 import org.namelessrom.devicecontrol.utils.Utils;
 
 import timber.log.Timber;
@@ -107,17 +105,11 @@ public class AwesomeListPreference extends CustomListPreference {
                 final int length = mPaths.length;
                 for (int i = 0; i < length; i++) {
                     Utils.writeValue(mPaths[i], value);
-                    if (startUp) {
-                        BootupConfig.setBootup(new BootupItem(
-                                category, getKey() + String.valueOf(i), mPaths[i], value, true));
-                    }
+
                 }
             } else {
                 Utils.writeValue(mPath, value);
-                if (startUp) {
-                    BootupConfig.setBootup(
-                            new BootupItem(category, getKey(), mPath, value, true));
-                }
+
             }
         }
     }

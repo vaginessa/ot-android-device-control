@@ -171,8 +171,6 @@ public class CheckRequirementsTask extends AsyncTask<Void, Void, Void> {
     };
 
     private void letsGetItStarted() {
-        Utils.startTaskerService(mainActivity);
-
         DeviceConfig deviceConfig = DeviceConfig.get();
         if (deviceConfig.dcFirstStart) {
             deviceConfig.dcFirstStart = false;

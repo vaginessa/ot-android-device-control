@@ -8,19 +8,7 @@ android {
     buildToolsVersion buildTools
 
     signingConfigs {
-        release {
-            def store = project.findProperty("sign_store") ?: "debug.keystore"
-            storeFile file(store)
 
-            if ("debug.keystore".equals(store)) {
-                logger.quiet('Not signing the build!')
-            } else {
-                logger.quiet('Signing the build!')
-                storePassword project.property("sign_store_pass")
-                keyAlias project.property("sign_key_alias")
-                keyPassword project.property("sign_key_pass")
-            }
-        }
     }
 
     defaultConfig {
@@ -40,15 +28,6 @@ android {
     }
 
     buildTypes {
-        release {
-            debuggable false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.pro'
-            minifyEnabled true
-            shrinkResources true
-            zipAlignEnabled true
-
-            signingConfig signingConfigs.release
-        }
         debug {
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.pro'
@@ -56,7 +35,7 @@ android {
             shrinkResources true
             zipAlignEnabled true
 
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
     }
 
@@ -94,9 +73,9 @@ dependencies {
     if (useLocalSources) {
         logger.quiet("Using local sources...")
         // see https://github.com/Evisceration/ExecutionLibrary
-        compile project(':ExecutionLibrary')
+//        compile project(':ExecutionLibrary')
         // see https://github.com/Evisceration/HardwareLibrary
-        compile project(':HardwareLibrary')
+//        compile project(':HardwareLibrary')
     } else {
         logger.quiet("Using external sources...")
         compile 'at.amartinz:execution:1.0.0'

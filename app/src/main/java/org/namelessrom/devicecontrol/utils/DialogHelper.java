@@ -33,8 +33,6 @@ import android.widget.TextView;
 
 import org.namelessrom.devicecontrol.App;
 import org.namelessrom.devicecontrol.R;
-import org.namelessrom.devicecontrol.models.BootupConfig;
-import org.namelessrom.devicecontrol.modules.bootup.BootupItem;
 
 public class DialogHelper {
 
@@ -134,8 +132,6 @@ public class DialogHelper {
                         pref.setSummary(newProgress);
                         Utils.writeValue(path, newProgress);
 
-                        BootupConfig.setBootup(
-                                new BootupItem(category, pref.getKey(), path, newProgress, true));
                     }
                 }).show();
     }

@@ -45,39 +45,11 @@ import org.namelessrom.devicecontrol.activities.BaseActivity;
 import org.namelessrom.devicecontrol.listeners.OnBackPressedListener;
 import org.namelessrom.devicecontrol.modules.about.AboutFragment;
 import org.namelessrom.devicecontrol.modules.appmanager.AppListFragment;
-import org.namelessrom.devicecontrol.modules.bootup.BootupFragment;
-import org.namelessrom.devicecontrol.modules.cpu.CpuSettingsFragment;
-import org.namelessrom.devicecontrol.modules.cpu.GovernorFragment;
-import org.namelessrom.devicecontrol.modules.device.DeviceFeatureFragment;
-import org.namelessrom.devicecontrol.modules.device.sub.FastChargeFragment;
-import org.namelessrom.devicecontrol.modules.device.sub.SoundControlFragment;
-import org.namelessrom.devicecontrol.modules.editor.BuildPropEditorFragment;
-import org.namelessrom.devicecontrol.modules.editor.SysctlEditorFragment;
-import org.namelessrom.devicecontrol.modules.editor.SysctlFragment;
-import org.namelessrom.devicecontrol.modules.flasher.FlasherFragment;
-import org.namelessrom.devicecontrol.modules.info.DeviceInfoFragment;
-import org.namelessrom.devicecontrol.modules.info.HardwareInfoFragment;
-import org.namelessrom.devicecontrol.modules.info.PerformanceInfoFragment;
-import org.namelessrom.devicecontrol.modules.info.SoftwareInfoFragment;
-import org.namelessrom.devicecontrol.modules.performance.FilesystemFragment;
-import org.namelessrom.devicecontrol.modules.performance.GpuSettingsFragment;
-import org.namelessrom.devicecontrol.modules.performance.ThermalFragment;
-import org.namelessrom.devicecontrol.modules.performance.sub.EntropyFragment;
-import org.namelessrom.devicecontrol.modules.performance.sub.IoSchedConfigFragment;
-import org.namelessrom.devicecontrol.modules.performance.sub.KsmFragment;
-import org.namelessrom.devicecontrol.modules.performance.sub.UksmFragment;
-import org.namelessrom.devicecontrol.modules.performance.sub.VoltageFragment;
 import org.namelessrom.devicecontrol.modules.preferences.PreferencesActivity;
-import org.namelessrom.devicecontrol.modules.tasker.TaskerFragment;
-import org.namelessrom.devicecontrol.modules.tools.ToolsMoreFragment;
-import org.namelessrom.devicecontrol.modules.tools.WirelessFileManagerFragment;
 import org.namelessrom.devicecontrol.theme.AppResources;
-import org.namelessrom.devicecontrol.thirdparty.PollFishImpl;
-import org.namelessrom.devicecontrol.thirdparty.Sense360Impl;
 import org.namelessrom.devicecontrol.utils.AppHelper;
 import org.namelessrom.devicecontrol.utils.Utils;
 
-import at.amartinz.execution.RootCheck;
 import at.amartinz.execution.ShellManager;
 import timber.log.Timber;
 
@@ -98,25 +70,12 @@ public class MainActivity extends BaseActivity implements ActivityCallbacks, Nav
 
     private CheckRequirementsTask mCheckRequirementsTask;
 
-    private static final int[] menuItemsNeedRoot = {
-            // controls
-            R.id.nav_item_controls_device, R.id.nav_item_controls_processor, R.id.nav_item_controls_graphics,
-            R.id.nav_item_controls_file_system, R.id.nav_item_controls_thermal,
-            // tools
-            R.id.nav_item_tools_bootup_restoration, R.id.nav_item_tools_tasker, R.id.nav_item_tools_flasher,
-            // TODO: enable in non root mode
-            R.id.nav_item_tools_app_manager, R.id.nav_item_tools_more
-    };
-
     @Override protected void onResume() {
         super.onResume();
-        PollFishImpl.initPollFish(this);
-        Sense360Impl.init(getApplicationContext());
     }
 
     @Override public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        PollFishImpl.initPollFish(this);
     }
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -139,7 +98,7 @@ public class MainActivity extends BaseActivity implements ActivityCallbacks, Nav
         mNavigationView = (NavigationView) findViewById(R.id.navigation_view_content);
         mNavigationView.setNavigationItemSelectedListener(this);
 
-        loadFragmentPrivate(DeviceConstants.ID_HOME, false);
+        loadFragmentPrivate(DeviceConstants.ID_TOOLS_APP_MANAGER, false);
         getSupportFragmentManager().executePendingTransactions();
 
         mCheckRequirementsTask = new CheckRequirementsTask(this);
@@ -170,30 +129,9 @@ public class MainActivity extends BaseActivity implements ActivityCallbacks, Nav
 
     private void setupDrawerItems() {
         // manually check home drawer entry
-        mPreviousMenuItem = findMenuItem(R.id.nav_item_home);
+        mPreviousMenuItem = findMenuItem(R.id.nav_item_tools_app_manager);
         if (mPreviousMenuItem != null) {
             mPreviousMenuItem.setChecked(true);
-        }
-
-        final boolean isRooted;
-        if (mCheckRequirementsTask != null) {
-            isRooted = mCheckRequirementsTask.hasRootGranted;
-        } else {
-            isRooted = RootCheck.isRooted();
-        }
-
-        if (isRooted || BuildConfig.DEBUG) {
-            if (!Utils.fileExists(getString(R.string.directory_msm_thermal))
-                && !Utils.fileExists(getString(R.string.file_intelli_thermal_base))) {
-                final MenuItem thermalItem = findMenuItem(R.id.nav_item_controls_thermal);
-                if (thermalItem != null) {
-                    thermalItem.setEnabled(false);
-                }
-            }
-        } else {
-            for (final int menuItemId : menuItemsNeedRoot) {
-                enableMenuItem(menuItemId, false);
-            }
         }
 
         final View headerView = mNavigationView.getHeaderView(0);
@@ -425,185 +363,12 @@ public class MainActivity extends BaseActivity implements ActivityCallbacks, Nav
                 mSubFragmentTitle = -1;
                 break;
             //--------------------------------------------------------------------------------------
-            case DeviceConstants.ID_INFO_DEVICE:
-                if (!onResume) {
-                    mCurrentFragment = new DeviceInfoFragment();
-                }
-                mTitle = mFragmentTitle = R.string.device;
-                mSubFragmentTitle = -1;
-                break;
-            case DeviceConstants.ID_INFO_HARDWARE:
-                if (!onResume) {
-                    mCurrentFragment = new HardwareInfoFragment();
-                }
-                mTitle = mFragmentTitle = R.string.hardware;
-                mSubFragmentTitle = -1;
-                break;
-            case DeviceConstants.ID_INFO_SOFTWARE:
-                if (!onResume) {
-                    mCurrentFragment = new SoftwareInfoFragment();
-                }
-                mTitle = mFragmentTitle = R.string.software;
-                mSubFragmentTitle = -1;
-                break;
-            case DeviceConstants.ID_INFO_PERFORMANCE:
-                if (!onResume) {
-                    mCurrentFragment = new PerformanceInfoFragment();
-                }
-                mTitle = mFragmentTitle = R.string.performance;
-                mSubFragmentTitle = -1;
-                break;
-            //--------------------------------------------------------------------------------------
-            case DeviceConstants.ID_CTRL_DEVICE:
-                if (!onResume) {
-                    mCurrentFragment = new DeviceFeatureFragment();
-                }
-                mTitle = mFragmentTitle = R.string.device;
-                mSubFragmentTitle = -1;
-                break;
-            case DeviceConstants.ID_FAST_CHARGE:
-                if (!onResume) {
-                    mCurrentFragment = new FastChargeFragment();
-                }
-                mTitle = mSubFragmentTitle = R.string.fast_charge;
-                break;
-            case DeviceConstants.ID_SOUND_CONTROL:
-                if (!onResume) {
-                    mCurrentFragment = new SoundControlFragment();
-                }
-                mTitle = mSubFragmentTitle = R.string.sound_control;
-                break;
-            case DeviceConstants.ID_KSM:
-                if (!onResume) {
-                    mCurrentFragment = new KsmFragment();
-                }
-                mTitle = mSubFragmentTitle = R.string.ksm;
-                break;
-            case DeviceConstants.ID_UKSM:
-                if (!onResume) {
-                    mCurrentFragment = new UksmFragment();
-                }
-                mTitle = mSubFragmentTitle = R.string.uksm;
-                break;
-            case DeviceConstants.ID_VOLTAGE:
-                if (!onResume) {
-                    mCurrentFragment = new VoltageFragment();
-                }
-                mTitle = mSubFragmentTitle = R.string.voltage_control;
-                break;
-            case DeviceConstants.ID_ENTROPY:
-                if (!onResume) {
-                    mCurrentFragment = new EntropyFragment();
-                }
-                mTitle = mSubFragmentTitle = R.string.entropy;
-                break;
-            //--------------------------------------------------------------------------------------
-            case DeviceConstants.ID_CTRL_PROCESSOR:
-                if (!onResume) {
-                    mCurrentFragment = new CpuSettingsFragment();
-                }
-                mTitle = mFragmentTitle = R.string.processor;
-                mSubFragmentTitle = -1;
-                break;
-            case DeviceConstants.ID_GOVERNOR_TUNABLE:
-                if (!onResume) {
-                    mCurrentFragment = new GovernorFragment();
-                }
-                mTitle = mSubFragmentTitle = R.string.governor_tuning;
-                break;
-            //--------------------------------------------------------------------------------------
-            case DeviceConstants.ID_CTRL_GRAPHICS:
-                if (!onResume) {
-                    mCurrentFragment = new GpuSettingsFragment();
-                }
-                mTitle = mFragmentTitle = R.string.graphics;
-                mSubFragmentTitle = -1;
-                break;
-            //--------------------------------------------------------------------------------------
-            case DeviceConstants.ID_CTRL_FILE_SYSTEM:
-                if (!onResume) {
-                    mCurrentFragment = new FilesystemFragment();
-                }
-                mTitle = mFragmentTitle = R.string.file_system;
-                mSubFragmentTitle = -1;
-                break;
-            case DeviceConstants.ID_IOSCHED_TUNING:
-                if (!onResume) {
-                    mCurrentFragment = new IoSchedConfigFragment();
-                }
-                mTitle = mSubFragmentTitle = R.string.io;
-                break;
-            //--------------------------------------------------------------------------------------
-            case DeviceConstants.ID_CTRL_THERMAL:
-                if (!onResume) {
-                    mCurrentFragment = new ThermalFragment();
-                }
-                mTitle = mFragmentTitle = R.string.thermal;
-                mSubFragmentTitle = -1;
-                break;
-            //--------------------------------------------------------------------------------------
-            case DeviceConstants.ID_TOOLS_BOOTUP_RESTORATION:
-                if (!onResume) {
-                    mCurrentFragment = new BootupFragment();
-                }
-                mTitle = mFragmentTitle = R.string.bootup_restoration;
-                mSubFragmentTitle = -1;
-                break;
-            //--------------------------------------------------------------------------------------
             case DeviceConstants.ID_TOOLS_APP_MANAGER:
                 if (!onResume) {
                     mCurrentFragment = new AppListFragment();
                 }
                 mTitle = mFragmentTitle = R.string.app_manager;
                 mSubFragmentTitle = -1;
-                break;
-            //--------------------------------------------------------------------------------------
-            case DeviceConstants.ID_TOOLS_TASKER:
-                if (!onResume) {
-                    mCurrentFragment = new TaskerFragment();
-                }
-                mTitle = mFragmentTitle = R.string.tasker;
-                mSubFragmentTitle = -1;
-                break;
-            //--------------------------------------------------------------------------------------
-            case DeviceConstants.ID_TOOLS_FLASHER:
-                if (!onResume) {
-                    mCurrentFragment = new FlasherFragment();
-                }
-                mTitle = mFragmentTitle = R.string.flasher;
-                mSubFragmentTitle = -1;
-                break;
-            //--------------------------------------------------------------------------------------
-            case DeviceConstants.ID_TOOLS_MORE:
-                if (!onResume) {
-                    mCurrentFragment = new ToolsMoreFragment();
-                }
-                mTitle = mFragmentTitle = R.string.more;
-                mSubFragmentTitle = -1;
-                break;
-            case DeviceConstants.ID_TOOLS_VM:
-                if (!onResume) {
-                    mCurrentFragment = new SysctlFragment();
-                }
-                mTitle = mSubFragmentTitle = R.string.sysctl_vm;
-                break;
-            case DeviceConstants.ID_TOOLS_EDITORS_VM:
-                if (!onResume) {
-                    mCurrentFragment = new SysctlEditorFragment();
-                }
-                mTitle = mSubFragmentTitle = R.string.sysctl_vm;
-                break;
-            case DeviceConstants.ID_TOOLS_EDITORS_BUILD_PROP:
-                if (!onResume) {
-                    mCurrentFragment = new BuildPropEditorFragment();
-                }
-                mTitle = mSubFragmentTitle = R.string.buildprop;
-                break;
-            case DeviceConstants.ID_TOOLS_WIRELESS_FM:
-                if (!onResume) {
-                    mCurrentFragment = new WirelessFileManagerFragment();
-                }
-                mTitle = mSubFragmentTitle = R.string.wireless_file_manager;
                 break;
             //--------------------------------------------------------------------------------------
             case DeviceConstants.ID_APP_INFO_LICENSE:

@@ -24,8 +24,6 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 
 import org.namelessrom.devicecontrol.R;
-import org.namelessrom.devicecontrol.models.BootupConfig;
-import org.namelessrom.devicecontrol.modules.bootup.BootupItem;
 import org.namelessrom.devicecontrol.utils.Utils;
 
 import java.util.Arrays;
@@ -49,7 +47,6 @@ public class AutoSwitchPreference extends MaterialSwitchPreference {
     private String mPath;
     private String[] mPaths;
 
-    private String mCategory = BootupConfig.CATEGORY_EXTRAS;
 
     public AutoSwitchPreference(final Context context) {
         super(context);
@@ -128,14 +125,6 @@ public class AutoSwitchPreference extends MaterialSwitchPreference {
         }
     }
 
-    public void setCategory(String category) {
-        mCategory = category;
-    }
-
-    public String getCategory() {
-        return mCategory;
-    }
-
     public String getPath() {
         return mPath;
     }
@@ -189,19 +178,9 @@ public class AutoSwitchPreference extends MaterialSwitchPreference {
             final int length = mPaths.length;
             for (int i = 0; i < length; i++) {
                 Utils.writeValue(mPaths[i], (isChecked ? mValueChecked : mValueNotChecked));
-                if (mStartup) {
-                    BootupConfig.setBootup(new BootupItem(mCategory,
-                            getKey() + String.valueOf(i), mPaths[i],
-                            (isChecked ? mValueChecked : mValueNotChecked), true));
-                }
             }
         } else {
             Utils.writeValue(mPath, (isChecked ? mValueChecked : mValueNotChecked));
-            if (mStartup) {
-                BootupConfig.setBootup(
-                        new BootupItem(mCategory, getKey(), mPath,
-                                (isChecked ? mValueChecked : mValueNotChecked), true));
-            }
         }
 
         postDelayed(new Runnable() {

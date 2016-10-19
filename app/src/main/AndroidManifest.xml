@@ -195,16 +195,6 @@
                 android:value="org.namelessrom.devicecontrol.MainActivity" />
         </activity>
         <activity
-            android:name=".modules.wizard.AddTaskActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/add_task"
-            android:launchMode="singleTask"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.namelessrom.devicecontrol.MainActivity" />
-        </activity>
-        <activity
             android:name=".modules.preferences.PreferencesActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/preferences"
@@ -250,22 +240,8 @@
             android:name=".services.BootupService"
             android:enabled="true"
             android:exported="false" />
-        <service
-            android:name=".services.TaskerService"
-            android:enabled="true"
-            android:exported="false" />
-        <service
-            android:name=".services.WebServerService"
-            android:enabled="true"
-            android:exported="false" />
 
         <!-- Broadcast Receivers -->
-        <receiver android:name=".receivers.BootUpReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-            </intent-filter>
-        </receiver>
         <receiver android:name=".receivers.SecretCodeReceiver">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE" />
@@ -284,20 +260,6 @@
         </receiver>
 
         <!-- Widgets -->
-        <receiver
-            android:name=".widgets.RebootWidget"
-            android:icon="@drawable/ic_power_settings_new_white_24dp"
-            android:label="@string/reboot"
-            tools:ignore="ExportedReceiver">
-            <intent-filter>
-                <action android:name="org.namelessrom.devicecontrol.widgets.showrebootdialog" />
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/widget_provider_reboot" />
-        </receiver>
 
         <!-- Providers -->
         <provider

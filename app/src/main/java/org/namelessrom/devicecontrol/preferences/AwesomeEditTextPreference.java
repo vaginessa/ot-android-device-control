@@ -23,8 +23,6 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 
 import org.namelessrom.devicecontrol.R;
-import org.namelessrom.devicecontrol.models.BootupConfig;
-import org.namelessrom.devicecontrol.modules.bootup.BootupItem;
 import org.namelessrom.devicecontrol.utils.Utils;
 
 import timber.log.Timber;
@@ -121,17 +119,11 @@ public class AwesomeEditTextPreference extends CustomEditTextPreference {
                 final int length = mPaths.length;
                 for (int i = 0; i < length; i++) {
                     Utils.writeValue(mPaths[i], value);
-                    if (mStartUp) {
-                        BootupConfig.setBootup(new BootupItem(
-                                mCategory, getKey() + String.valueOf(i), mPaths[i], value, true));
-                    }
+
                 }
             } else {
                 Utils.writeValue(mPath, value);
-                if (mStartUp) {
-                    BootupConfig.setBootup(
-                            new BootupItem(mCategory, getKey(), mPath, value, true));
-                }
+
             }
             initValue();
         }
