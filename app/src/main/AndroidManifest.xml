@@ -15,9 +15,9 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <manifest
-    package="org.namelessrom.devicecontrol"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    package="org.namelessrom.devicecontrol"
     android:installLocation="internalOnly">
 
     <!-- Internet / Networking -->
@@ -156,34 +156,6 @@
                 android:value="org.namelessrom.devicecontrol.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.RequestFileActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:excludeFromRecents="true"
-            android:label="@string/pick_file"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.namelessrom.devicecontrol.MainActivity" />
-        </activity>
-        <activity
-            android:name=".activities.FilePickerActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/pick_file"
-            android:parentActivityName=".MainActivity">
-            <intent-filter>
-                <action android:name="org.namelessrom.devicecontrol.api.FILE_PICKER" />
-                <action android:name="android.intent.action.GET_CONTENT" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:mimeType="application/zip" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.namelessrom.devicecontrol.MainActivity" />
-        </activity>
-        <activity
             android:name=".modules.preferences.PreferencesActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/preferences"
@@ -195,30 +167,8 @@
                 android:value="org.namelessrom.devicecontrol.MainActivity" />
         </activity>
         <!-- Device activities -->
-        <activity
-            android:name=".activities.QuickActionActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/quick_actions"
-            android:launchMode="singleInstance"
-            android:theme="@style/CustomDialog" />
 
         <!-- Broadcast Receivers -->
-        <receiver android:name=".receivers.SecretCodeReceiver">
-            <intent-filter>
-                <action android:name="android.provider.Telephony.SECRET_CODE" />
-
-                <data
-                    android:host="13372"
-                    android:scheme="android_secret_code" />
-            </intent-filter>
-        </receiver>
-        <receiver
-            android:name=".receivers.ActionReceiver"
-            android:permission="org.namelessrom.devicecontrol.TRIGGER_ACTION">
-            <intent-filter>
-                <action android:name="org.namelessrom.devicecontrol.TRIGGER_ACTION" />
-            </intent-filter>
-        </receiver>
 
         <!-- Widgets -->
 

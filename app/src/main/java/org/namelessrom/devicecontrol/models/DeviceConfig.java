@@ -28,35 +28,20 @@ import timber.log.Timber;
  * Device configuration which auto serializes itself to a file
  */
 public class DeviceConfig {
-    private transient static final String NAME = "DeviceConfig";
-
     public static final int THEME_AUTO = 1;
     public static final int THEME_DAY = 2;
     public static final int THEME_NIGHT = 3;
-
+    private transient static final String NAME = "DeviceConfig";
+    private transient static DeviceConfig instance;
     public boolean dcFirstStart;
-
     public int themeMode = THEME_NIGHT;
-    public boolean showPollfish;
-
     public boolean skipChecks;
-
-    public boolean perfCpuLock;
-    public boolean perfCpuGovLock;
-    public boolean perfCpuInfo;
-
     public boolean ignoreDialogWarningBusyBox;
     public boolean ignoreDialogWarningRoot;
     public boolean ignoreDialogWarningSuVersion;
-
-    public boolean expertMode;
-
     // TODO: readd
     public String suShellContext = "normal"; //Shell.CONTEXT_NORMAL;
-
     public int appVersion;
-
-    private transient static DeviceConfig instance;
 
     private DeviceConfig() {
         ensureDefaults();
