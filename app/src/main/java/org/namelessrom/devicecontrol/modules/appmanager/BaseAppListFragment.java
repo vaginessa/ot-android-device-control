@@ -19,6 +19,7 @@ package org.namelessrom.devicecontrol.modules.appmanager;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -61,21 +62,31 @@ import timber.log.Timber;
 
 public abstract class BaseAppListFragment extends Fragment implements SearchView.OnQueryTextListener, SearchView.OnCloseListener, View.OnClickListener {
     private static final int ANIM_DURATION = 450;
-
+    private final HashSet<AppItem> mSelectedApps = new HashSet<>();
     private AppListAdapter mAdapter;
-
     private CustomRecyclerView mRecyclerView;
     private TextView mEmptyView;
     private LinearLayout mProgressContainer;
-
-    private final HashSet<AppItem> mSelectedApps = new HashSet<>();
     private HorizontalScrollView mAppListBar;
-
+    private final AppSelectedListener mAppSelectedListener = new AppSelectedListener() {
+        @Override
+        public void onAppSelected(String packageName, ArrayList<AppItem> selectedApps) {
+            mSelectedApps.clear();
+            mSelectedApps.addAll(selectedApps);
+            if (mSelectedApps.size() == 0) {
+                mAppListBar.setVisibility(View.GONE);
+            } else {
+                mAppListBar.setVisibility(View.VISIBLE);
+            }
+        }
+    };
     private boolean mIsLoading;
-
-    public interface AppSelectedListener {
-        void onAppSelected(String packageName, ArrayList<AppItem> selectedApps);
-    }
+    private final AppItem.UninstallListener mUninstallListener = new AppItem.UninstallListener() {
+        @Override
+        public void OnUninstallComplete() {
+            loadApps(true);
+        }
+    };
 
     @Override public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_app_list, menu);
@@ -172,6 +183,7 @@ public abstract class BaseAppListFragment extends Fragment implements SearchView
         }
     }
 
+    @SuppressLint("StringFormatMatches")
     private void showActionDialog(final int type) {
         int title;
         String message;
@@ -239,6 +251,58 @@ public abstract class BaseAppListFragment extends Fragment implements SearchView
         }
 
         new ProcessTask(getActivity(), type, titleResId, messageResId, mSelectedApps).execute();
+    }
+
+    public void loadApps(final boolean animate) {
+        if (mIsLoading) {
+            return;
+        }
+
+        mIsLoading = true;
+        mProgressContainer.post(new Runnable() {
+            @Override
+            public void run() {
+                mProgressContainer.setVisibility(View.VISIBLE);
+
+                if (animate) {
+                    final ObjectAnimator anim = ObjectAnimator.ofFloat(mProgressContainer, "alpha", 0f, 1f);
+                    anim.addListener(new Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            new LoadApps().execute();
+                        }
+
+                        @Override
+                        public void onAnimationCancel(Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animator animation) {
+                        }
+                    });
+                    anim.setDuration(ANIM_DURATION);
+                    anim.start();
+                } else {
+                    mProgressContainer.setAlpha(1f);
+                    new LoadApps().execute();
+                }
+            }
+        });
+    }
+
+    private void updateVisibility(boolean isEmpty) {
+        mRecyclerView.setVisibility(isEmpty ? View.GONE : View.VISIBLE);
+        mEmptyView.setVisibility(isEmpty ? View.VISIBLE : View.GONE);
+    }
+
+    protected abstract boolean isFiltered(@NonNull ApplicationInfo applicationInfo);
+
+    public interface AppSelectedListener {
+        void onAppSelected(String packageName, ArrayList<AppItem> selectedApps);
     }
 
     private class ProcessTask extends AsyncTask<Void, Integer, Void> {
@@ -309,46 +373,6 @@ public abstract class BaseAppListFragment extends Fragment implements SearchView
             Snackbar.make(BaseAppListFragment.this.mAppListBar, R.string.action_completed, Snackbar.LENGTH_LONG).show();
         }
     }
-
-    public void loadApps(final boolean animate) {
-        if (mIsLoading) {
-            return;
-        }
-
-        mIsLoading = true;
-        mProgressContainer.post(new Runnable() {
-            @Override public void run() {
-                mProgressContainer.setVisibility(View.VISIBLE);
-
-                if (animate) {
-                    final ObjectAnimator anim = ObjectAnimator.ofFloat(mProgressContainer, "alpha", 0f, 1f);
-                    anim.addListener(new Animator.AnimatorListener() {
-                        @Override public void onAnimationStart(Animator animation) { }
-
-                        @Override public void onAnimationEnd(Animator animation) {
-                            new LoadApps().execute();
-                        }
-
-                        @Override public void onAnimationCancel(Animator animation) { }
-
-                        @Override public void onAnimationRepeat(Animator animation) { }
-                    });
-                    anim.setDuration(ANIM_DURATION);
-                    anim.start();
-                } else {
-                    mProgressContainer.setAlpha(1f);
-                    new LoadApps().execute();
-                }
-            }
-        });
-    }
-
-    private void updateVisibility(boolean isEmpty) {
-        mRecyclerView.setVisibility(isEmpty ? View.GONE : View.VISIBLE);
-        mEmptyView.setVisibility(isEmpty ? View.VISIBLE : View.GONE);
-    }
-
-    protected abstract boolean isFiltered(@NonNull ApplicationInfo applicationInfo);
 
     private class LoadApps extends AsyncTask<Void, Void, ArrayList<AppItem>> {
         @Override protected ArrayList<AppItem> doInBackground(Void... params) {
@@ -434,23 +458,5 @@ public abstract class BaseAppListFragment extends Fragment implements SearchView
             invalidateOptionsMenu();
         }
     }
-
-    private final AppItem.UninstallListener mUninstallListener = new AppItem.UninstallListener() {
-        @Override public void OnUninstallComplete() {
-            loadApps(true);
-        }
-    };
-
-    private final AppSelectedListener mAppSelectedListener = new AppSelectedListener() {
-        @Override public void onAppSelected(String packageName, ArrayList<AppItem> selectedApps) {
-            mSelectedApps.clear();
-            mSelectedApps.addAll(selectedApps);
-            if (mSelectedApps.size() == 0) {
-                mAppListBar.setVisibility(View.GONE);
-            } else {
-                mAppListBar.setVisibility(View.VISIBLE);
-            }
-        }
-    };
 
 }

@@ -34,12 +34,6 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 import at.amartinz.execution.ShellManager;
-import at.amartinz.universaldebug.UniversalDebug;
-import at.amartinz.universaldebug.fabric.trees.CrashlyticsComponent;
-import at.amartinz.universaldebug.trees.BaseTree;
-import at.amartinz.universaldebug.trees.LogComponent;
-import at.amartinz.universaldebug.trees.VibrationComponent;
-import at.amartinz.universaldebug.trees.WriterComponent;
 import io.paperdb.Paper;
 import timber.log.Timber;
 
@@ -86,13 +80,6 @@ public class App extends android.app.Application {
         }
         App.sInstance = this;
 
-        final UniversalDebug universalDebug = new UniversalDebug(this)
-                .withDebug(BuildConfig.DEBUG)
-                .withTimber(true)
-                .withDebugTree(buildDebugTree())
-                .withProductionTree(buildProductionTree());
-
-        universalDebug.install();
         ShellManager.enableDebug(App.enableDebug);
 
         Paper.init(this);
@@ -118,11 +105,6 @@ public class App extends android.app.Application {
         }
 
         handleAppUpgrades();
-
-        if (App.enableDebug) {
-            final int gmsVersion = getResources().getInteger(R.integer.google_play_services_version);
-            Timber.v("Google Play Services -> %s", gmsVersion);
-        }
     }
 
     private void handleAppUpgrades() {
@@ -173,44 +155,4 @@ public class App extends android.app.Application {
         return getResources().getStringArray(resId);
     }
 
-    private BaseTree buildDebugTree() {
-        return buildTree(true);
-    }
-
-    private BaseTree buildProductionTree() {
-        return buildTree(false);
-    }
-
-    private BaseTree buildTree(boolean isDebug) {
-        final HashSet<Integer> priorityFilter = new HashSet<>();
-        // if we are in release mode, remove all log calls except ERROR and WARN
-        if (!isDebug) {
-            priorityFilter.addAll(Arrays.asList(Log.ASSERT, Log.DEBUG, Log.INFO, Log.VERBOSE));
-        }
-        final BaseTree baseTree = new BaseTree(this, priorityFilter);
-
-        final LogComponent logComponent = new LogComponent(baseTree);
-        baseTree.addComponent(logComponent);
-
-        if (isDebug) {
-            final VibrationComponent vibrationComponent = new VibrationComponent(baseTree);
-            // only vibrate on error logs
-            final HashSet<Integer> vibrationFilter = new HashSet<>(
-                    Arrays.asList(Log.ASSERT, Log.DEBUG, Log.INFO, Log.VERBOSE, Log.WARN));
-            vibrationComponent.setPriorityFilterSet(vibrationFilter);
-            baseTree.addComponent(vibrationComponent);
-
-            final WriterComponent writerComponent = new WriterComponent(baseTree, getExternalCacheDir());
-            // only vibrate on error and warning logs
-            final HashSet<Integer> writerFilter = new HashSet<>(
-                    Arrays.asList(Log.ASSERT, Log.DEBUG, Log.INFO, Log.VERBOSE, Log.WARN));
-            writerComponent.setPriorityFilterSet(writerFilter);
-            baseTree.addComponent(writerComponent);
-        }
-
-        final CrashlyticsComponent crashlyticsComponent = new CrashlyticsComponent(baseTree);
-        baseTree.addComponent(crashlyticsComponent);
-
-        return baseTree;
-    }
 }

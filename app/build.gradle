@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.hugo'
 apply plugin: 'com.neenbedankt.android-apt'
-apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion targetSdk
@@ -17,14 +16,6 @@ android {
         targetSdkVersion targetSdk
         versionCode 159
         versionName '0.8.7'
-
-        def String gitRevision = getGitCommitHash()
-        if (gitRevision != null) {
-            versionName(versionName + '-git-' + gitRevision)
-        }
-
-        buildConfigField('String', 'API_KEY_POLL_FISH', keyPollFish);
-        buildConfigField('String', 'API_KEY_GOOGLE_PLAY', keyGooglePlay)
     }
 
     buildTypes {
@@ -56,10 +47,6 @@ android {
         disable 'MissingTranslation', 'ExtraTranslation';
     }
 
-    productFlavors {
-        normal {}
-    }
-
     packagingOptions {
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/NOTICE.txt'
@@ -68,20 +55,9 @@ android {
 }
 
 dependencies {
-//    compile project(':ExternalSources')
 
-    if (useLocalSources) {
-        logger.quiet("Using local sources...")
-        // see https://github.com/Evisceration/ExecutionLibrary
-//        compile project(':ExecutionLibrary')
-        // see https://github.com/Evisceration/HardwareLibrary
-//        compile project(':HardwareLibrary')
-    } else {
-        logger.quiet("Using external sources...")
-        compile 'at.amartinz:execution:1.0.0'
-        compile 'at.amartinz:hardware:1.0.1'
-    }
-
+    compile 'at.amartinz:execution:1.0.0'
+    compile 'at.amartinz:hardware:1.0.1'
     // see https://github.com/Evisceration/MaterialPreferences
     compile 'com.github.Evisceration:MaterialPreferences:master-SNAPSHOT'
 
@@ -92,9 +68,6 @@ dependencies {
     // see https://github.com/magro/kryo-serializers
     compile 'de.javakaffee:kryo-serializers:0.38'
 
-    // see https://github.com/Evisceration/UniversalDebug
-    compile 'at.amartinz:universal-debug:1.0.0'
-    compile 'at.amartinz:universal-debug-fabric:1.0.0'
     // see https://github.com/JakeWharton/timber
     compile 'com.jakewharton.timber:timber:4.3.0'
 
@@ -126,32 +99,10 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.2.1'
     // see https://github.com/ReactiveX/RxJava
     compile 'io.reactivex:rxjava:1.1.9'
-    // see https://github.com/mcharmas/Android-ReactiveLocation
-    compile 'pl.charmas.android:android-reactive-location:0.9@aar'
 
-    // Sense360
-    // see http://sense360.com/documentation.php?android
-    compile 'com.sense360:sense360-quinoa:2.4.1@aar'
-    compile 'com.google.android.gms:play-services-location:8.4.0'
-    compile('com.google.android.gms:play-services-gcm:8.4.0') {
-        exclude module: 'play-services-measurement'
-    }
     // see https://github.com/google/gson
     compile 'com.google.code.gson:gson:2.7'
     // see https://github.com/square/okhttp
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
 
-    // see https://www.pollfish.com/android
-    compile 'com.pollfish:pollfish:4.2.1:googleplayRelease@aar'
-    compile 'com.google.android.gms:play-services-base:8.4.0'
-
-    // FABRIC
-    // see https://fabric.io/kits/android/answers
-    compile('com.crashlytics.sdk.android:answers:1.3.9@aar') {
-        transitive = true;
-    }
-    // see https://fabric.io/kits/android/crashlytics
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.2@aar') {
-        transitive = true;
-    }
 }

@@ -16,8 +16,6 @@
   ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="permission_trigger_action">Trigger action</string>
-    <string name="permission_trigger_action_desc">Allows triggering actions via Device Control</string>
 
     <string name="home">Home</string>
     <string name="app_manager">App manager</string>
