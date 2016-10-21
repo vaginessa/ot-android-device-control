@@ -27,7 +27,7 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 import org.namelessrom.devicecontrol.App;
-import org.namelessrom.devicecontrol.Constants;
+import org.namelessrom.devicecontrol.models.Constants;
 import org.namelessrom.devicecontrol.R;
 
 import java.io.BufferedReader;

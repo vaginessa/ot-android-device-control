@@ -27,6 +27,7 @@ import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 
 import org.namelessrom.devicecontrol.models.DeviceConfig;
+import org.namelessrom.devicecontrol.models.DeviceConstants;
 
 import java.io.File;
 import java.util.Arrays;
@@ -59,6 +60,25 @@ public class App extends android.app.Application {
         return ((App) context.getApplicationContext());
     }
 
+    public static void setupThemeMode() {
+        final DeviceConfig deviceConfig = DeviceConfig.get();
+        switch (deviceConfig.themeMode) {
+            case DeviceConfig.THEME_AUTO: {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO);
+                break;
+            }
+            case DeviceConfig.THEME_DAY: {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                break;
+            }
+            default:
+            case DeviceConfig.THEME_NIGHT: {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                break;
+            }
+        }
+    }
+
     @Override public void onCreate() {
         super.onCreate();
         if (App.sInstance != null) {
@@ -83,25 +103,6 @@ public class App extends android.app.Application {
                 setupEverythingAsync();
             }
         });
-    }
-
-    public static void setupThemeMode() {
-        final DeviceConfig deviceConfig = DeviceConfig.get();
-        switch (deviceConfig.themeMode) {
-            case DeviceConfig.THEME_AUTO: {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO);
-                break;
-            }
-            case DeviceConfig.THEME_DAY: {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                break;
-            }
-            default:
-            case DeviceConfig.THEME_NIGHT: {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                break;
-            }
-        }
     }
 
     @WorkerThread private void setupEverythingAsync() {

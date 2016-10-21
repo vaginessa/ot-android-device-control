@@ -12,7 +12,7 @@ import android.support.v4.app.ActivityManagerCompat;
 import android.support.v4.content.ContextCompat;
 
 import org.namelessrom.devicecontrol.App;
-import org.namelessrom.devicecontrol.Constants;
+import org.namelessrom.devicecontrol.models.Constants;
 import org.namelessrom.devicecontrol.R;
 import org.namelessrom.devicecontrol.models.DeviceConfig;
 

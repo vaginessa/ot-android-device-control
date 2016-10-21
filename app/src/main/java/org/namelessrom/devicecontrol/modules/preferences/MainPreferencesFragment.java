@@ -25,7 +25,7 @@ import android.preference.PreferenceManager;
 import android.view.View;
 
 import org.namelessrom.devicecontrol.App;
-import org.namelessrom.devicecontrol.Constants;
+import org.namelessrom.devicecontrol.models.Constants;
 import org.namelessrom.devicecontrol.R;
 import org.namelessrom.devicecontrol.models.DeviceConfig;
 import org.namelessrom.devicecontrol.theme.AppResources;

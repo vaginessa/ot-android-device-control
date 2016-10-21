@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package org.namelessrom.devicecontrol;
+package org.namelessrom.devicecontrol.models;
 
 public class Constants {
     public static final String[] EMPTY_STRINGS = new String[0];

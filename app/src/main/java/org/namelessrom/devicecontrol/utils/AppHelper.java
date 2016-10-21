@@ -47,7 +47,7 @@ import at.amartinz.hardware.ProcessManager;
 import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
-import static org.namelessrom.devicecontrol.DeviceConstants.ID_PGREP;
+import static org.namelessrom.devicecontrol.models.DeviceConstants.ID_PGREP;
 import static org.namelessrom.devicecontrol.utils.ShellOutput.OnShellOutputListener;
 
 /**
