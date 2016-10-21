@@ -605,11 +605,6 @@ public class AppDetailsActivity extends BaseActivity implements PackageStatsObse
                     resId = R.id.page_app_details;
                     break;
                 }
-                // TODO: make visible once done
-                //case 1: {
-                //    resId = R.id.page_app_details;
-                //    break;
-                //}
             }
             return findViewById(resId);
         }
