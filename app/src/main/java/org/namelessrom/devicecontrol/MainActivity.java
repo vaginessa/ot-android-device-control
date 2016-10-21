@@ -32,9 +32,9 @@ import android.widget.Toast;
 
 import org.namelessrom.devicecontrol.activities.BaseActivity;
 import org.namelessrom.devicecontrol.listeners.OnBackPressedListener;
+import org.namelessrom.devicecontrol.models.AppResources;
 import org.namelessrom.devicecontrol.modules.appmanager.AppListFragment;
 import org.namelessrom.devicecontrol.modules.preferences.PreferencesActivity;
-import org.namelessrom.devicecontrol.theme.AppResources;
 import org.namelessrom.devicecontrol.utils.AppHelper;
 import org.namelessrom.devicecontrol.utils.Utils;
 
@@ -49,8 +49,6 @@ public class MainActivity extends BaseActivity {
 
     private int mTitle = R.string.home;
     private int mFragmentTitle = R.string.home;
-
-    private CheckRequirementsTask mCheckRequirementsTask;
 
     @Override
     protected void onResume() {
@@ -68,7 +66,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         setupToolbar();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        if (getSupportActionBar() != null) getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         loadFragmentPrivate();
         getSupportFragmentManager().executePendingTransactions();
@@ -172,11 +170,6 @@ public class MainActivity extends BaseActivity {
     protected void onDestroy() {
         Timber.d("closing shells");
         ShellManager.get().cleanupShells();
-
-        if (mCheckRequirementsTask != null) {
-            mCheckRequirementsTask.destroy();
-            mCheckRequirementsTask = null;
-        }
 
         AppResources.get().cleanup();
         super.onDestroy();

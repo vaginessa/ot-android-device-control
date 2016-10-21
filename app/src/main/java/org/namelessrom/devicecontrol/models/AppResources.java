@@ -1,4 +1,4 @@
-package org.namelessrom.devicecontrol.theme;
+package org.namelessrom.devicecontrol.models;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -12,9 +12,7 @@ import android.support.v4.app.ActivityManagerCompat;
 import android.support.v4.content.ContextCompat;
 
 import org.namelessrom.devicecontrol.App;
-import org.namelessrom.devicecontrol.models.Constants;
 import org.namelessrom.devicecontrol.R;
-import org.namelessrom.devicecontrol.models.DeviceConfig;
 
 import timber.log.Timber;
 
@@ -33,7 +31,7 @@ public class AppResources {
         this.primaryColor = getColor(context, R.color.colorPrimaryDark);
     }
 
-    @Deprecated public static AppResources get() {
+    public static AppResources get() {
         return get(App.get());
     }
 

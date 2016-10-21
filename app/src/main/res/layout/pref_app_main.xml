@@ -21,17 +21,17 @@
     android:orientation="vertical">
 
     <!-- Interface -->
-    <org.namelessrom.devicecontrol.preferences.CustomPreferenceCategoryMaterial
+    <org.namelessrom.devicecontrol.views.preferences.CustomPreferenceCategoryMaterial
         style="@style/MaterialPreferences.Default"
         app:prefTitle="@string/user_interface">
 
         <alexander.martinz.libs.materialpreferences.MaterialListPreference
             android:id="@+id/prefs_theme_mode"
             style="@style/MaterialPreferences.Default"
-            app:prefKey="light_theme"
-            app:prefSummary="@string/theme_mode_summary"
             app:prefEntries="@array/theme_mode"
             app:prefEntryValues="@array/theme_mode_values"
+            app:prefKey="light_theme"
+            app:prefSummary="@string/theme_mode_summary"
             app:prefTitle="@string/theme_mode" />
 
         <alexander.martinz.libs.materialpreferences.MaterialSwitchPreference
@@ -41,7 +41,7 @@
             app:prefSummary="@string/low_end_gfx_summary"
             app:prefTitle="@string/low_end_gfx" />
 
-    </org.namelessrom.devicecontrol.preferences.CustomPreferenceCategoryMaterial>
+    </org.namelessrom.devicecontrol.views.preferences.CustomPreferenceCategoryMaterial>
 
 
 </LinearLayout>

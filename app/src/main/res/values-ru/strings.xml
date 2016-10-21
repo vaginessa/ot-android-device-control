@@ -19,11 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Главная</string>
   <string name="app_manager">Диспетчер приложений</string>
-  <string name="get_busybox">Установить BusyBox</string>
-  <string name="checking_requirements">Проверка требований&#8230;</string>
   <string name="message_loading">Загрузка, пожалуйста подождите&#8230;</string>
   <string name="action_press_again">Нажмите ещё раз для выхода!</string>
-  <string name="dialog_warning">Внимание!</string>
   <string name="refresh">Обновить</string>
   <string name="cold">Холодный</string>
   <string name="enable">Включить</string>
@@ -32,7 +29,6 @@
   <string name="disable_msg">%s будет отключено.\n\nПродолжить?</string>
   <string name="filter">Фильтровать</string>
   <string name="preferences">Настройки</string>
-  <string name="media_scan_trigger">Запустить сканирование медиафайлов</string>
   <string name="clear_cache">Очистить кэш</string>
   <string name="clear_data">Очистить данные</string>
   <string name="total">Итого</string>
@@ -45,7 +41,6 @@
   <string name="cache">Кэш</string>
   <string name="applying_wait">Применение изменений, пожалуйста, подождите...</string>
   <string name="open_play_store">Открыть приложение в Google Play\u2122</string>
-  <string name="pick_file">Выбрать файл</string>
   <string name="something_went_wrong">Извините, но что-то пошло не так!</string>
   <string name="user_interface">Интерфейс</string>
   <string name="good">Хорошее</string>

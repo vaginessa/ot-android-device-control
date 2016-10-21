@@ -31,15 +31,12 @@
     <!-- Accents -->
     <color name="dark_background">#ff374046</color>
     <!-- Accents light -->
-    <color name="accent_light">#009688</color>
     <color name="light_background">#fff5f5f5</color>
     <!-- palette -->
-    <color name="grass">#ff2ab081</color>
     <color name="palette_teal_700">#ff00796B</color>
     <!-- Misc -->
     <color name="red_middle">#dc3d24</color>
     <color name="darker_gray">#66666666</color>
-    <color name="blueish_strong">#4EB1BA</color>
     <!-- Wizard -->
     <!-- Wizard #2 -->
     <!-- etc -->

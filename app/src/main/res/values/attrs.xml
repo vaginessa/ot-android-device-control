@@ -31,16 +31,4 @@
         <attr name="valueChecked" format="string" />
         <attr name="valueNotChecked" format="string" />
     </declare-styleable>
-    <!-- seekbar org.namelessrom.devicecontrol.externalsources.preference -->
-    <declare-styleable name="SeekBarPreference">
-        <attr name="min" format="integer" />
-        <attr name="unitsLeft" format="string" />
-        <attr name="unitsRight" format="string" />
-    </declare-styleable>
-    <!-- Card Views -->
-    <declare-styleable name="CardTitleView">
-        <attr name="icon" />
-        <attr name="iconTint" format="color|reference" />
-        <attr name="title" />
-    </declare-styleable>
 </resources>

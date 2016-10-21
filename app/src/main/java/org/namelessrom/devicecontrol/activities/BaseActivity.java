@@ -43,7 +43,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import org.namelessrom.devicecontrol.R;
-import org.namelessrom.devicecontrol.theme.AppResources;
+import org.namelessrom.devicecontrol.models.AppResources;
 
 import java.util.ArrayList;
 import java.util.Collection;

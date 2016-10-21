@@ -19,11 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Inicio</string>
   <string name="app_manager">Gerente da app</string>
-  <string name="get_busybox">Instalar BusyBox</string>
-  <string name="checking_requirements">A verificar requisitos...</string>
   <string name="message_loading">Carregando, por favor, aguarde...</string>
   <string name="action_press_again">Pressione novamente para sair!</string>
-  <string name="dialog_warning">Alerta!</string>
   <string name="refresh">Atualizar</string>
   <string name="cold">Frio</string>
   <string name="enable">Habilitar</string>
@@ -32,7 +29,6 @@
   <string name="disable_msg">%s será desativado.\n\nContinuar?</string>
   <string name="filter">Filtro</string>
   <string name="preferences">Preferências</string>
-  <string name="media_scan_trigger">Iniciar scan media</string>
   <string name="media_scan_triggered">O scan de media foi ativado, poderá levar algum tempo!</string>
   <string name="force_stop">Forçar paragem</string>
   <string name="app_details">Detalhes da aplicação</string>
@@ -50,7 +46,6 @@
   <string name="cache">Cache</string>
   <string name="applying_wait">Aplicando, por favor aguarde&#8230;</string>
   <string name="open_play_store">Ver aplicação em Google Play\u2122</string>
-  <string name="pick_file">Escolha um arquivo</string>
   <string name="something_went_wrong">Desculpe mas algo correu mal!</string>
   <string name="user_interface">Interface</string>
   <string name="good">Bom</string>
@@ -65,7 +60,6 @@
   <string name="uninstall_success">Desinstalado com sucesso \"%s\"</string>
   <string name="disabled">Desativado</string>
   <string name="system">Sistema</string>
-  <string name="touch_boost">Aumento do toque</string>
   <string name="permissions">Permissões</string>
   <string name="security_settings_desc">Este aplicativo pode acessar aos seguintes nos seus dispositivos:</string>
   <string name="join_two_items"><xliff:g id="first_item">%1$s</xliff:g> e <xliff:g id="second_item">%2$s</xliff:g></string>

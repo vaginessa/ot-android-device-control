@@ -19,15 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Ana Sayfa</string>
   <string name="app_manager">Uygulama Yöneticisi</string>
-  <string name="get_busybox">BusyBox\'ı Yükle</string>
-  <string name="checking_requirements">Gerekenler Kontrol Ediliyor&#8230;</string>
-  <string name="please_wait">Lütfen Bekleyin&#8230;</string>
-  <string name="missing_requirements">Eksik Gereksinimler</string>
-    <string name="message_loading">Yükleniyor, lütfen bekleyin&#8230;</string>
+  <string name="message_loading">Yükleniyor, lütfen bekleyin&#8230;</string>
   <string name="action_press_again">Çıkmak için bir kere daha basın!</string>
-    <string name="dialog_warning">Uyarı!</string>
-    <string name="dialog_warning_su_version">Your installed superuser \"%s\" is functional but might not work reliable with Device Control, because I have not tested it.\nIf you encounter any problems, using \"SuperSU\" is recommended!</string>
-  <string name="dialog_action_never_show_again">Tekrar Gösterme</string>
   <string name="refresh">Yenile</string>
     <string name="cold">Soğuk</string>
     <string name="enable">Etkinleştir</string>
@@ -43,8 +36,7 @@
   <string name="action_completed">Eylem başarıyla tamamlandı!</string>
     <string name="filter">Filtre</string>
     <string name="preferences">Tercihler</string>
-  <string name="media_scan_trigger">Medya tarama başlatma</string>
-    <string name="media_scan_triggered">Medya tarama tetikledi, bu biraz zaman alabilir!</string>
+  <string name="media_scan_triggered">Medya tarama tetikledi, bu biraz zaman alabilir!</string>
   <string name="force_stop">Durdurmaya zorla</string>
   <string name="app_details">Uygulama detayları</string>
   <string name="clear_cache">Önbelleği temizle</string>
@@ -61,7 +53,6 @@
   <string name="cache">Önbellek</string>
   <string name="applying_wait">Uygulanıyor, Lütfen bekleyin&#8230;</string>
     <string name="open_play_store">Uygulamayı Google Play\'de Göster\u2122</string>
-    <string name="pick_file">Dosya seçin</string>
   <string name="something_went_wrong">Üzgünüm ama birşeyler yanlış gitti!</string>
     <string name="user_interface">Arayüz</string>
     <string name="good">İyi</string>
@@ -79,7 +70,6 @@
     <string name="disabled">Devre dışı</string>
   <string name="user">Kullanıcı</string>
   <string name="system">Sistem</string>
-    <string name="touch_boost">Dokunmatik hızlandırma</string>
   <string name="permissions">İzinler</string>
   <string name="security_settings_desc">Bu uygulama cihazınızda bunlara erişebilir:</string>
   <string name="join_two_items"><xliff:g id="first_item">%1$s</xliff:g> ve <xliff:g id="second_item">%2$s</xliff:g></string>
@@ -94,8 +84,6 @@
     <string name="no_items_found">Öğe bulunamadı&#8230;</string>
   <string name="could_not_launch_activity">Etkinlik başlatılamadı</string>
   <string name="launch_app">Uygulamayı başlat</string>
-  <string name="dialog_permission_title">İzinler</string>
-  <string name="dialog_permission_summary">Kontrol senin telefon, harici depolama ve düzgün çalışması için konum izinleri için sorar beri Android bazı izinler gerekir açıkça user.\n\nDevice tarafından verilen için M., aygıt bilgileri gibi bazı özellikleri kırabilir, onlar bu yetkileri birleştiğinde gibi \nWithout.</string>
   <string name="cleared_cache">Önbellek Temizlendi!</string>
   <string name="cleared_data">Veri Temizlendi!</string>
   <string name="force_stopped_app">Uygulama durdurulmaya zorlandı!</string>

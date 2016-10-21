@@ -23,7 +23,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.animation.Animation;
 
-import org.namelessrom.devicecontrol.ActivityCallbacks;
 import org.namelessrom.devicecontrol.MainActivity;
 import org.namelessrom.devicecontrol.activities.BaseActivity;
 import org.namelessrom.devicecontrol.listeners.OnBackPressedListener;
@@ -46,11 +45,6 @@ public abstract class AttachFragment extends Fragment implements OnBackPressedLi
 
     @Override public void onActivityCreated(final Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        final Activity activity = getActivity();
-        if (activity instanceof ActivityCallbacks) {
-            ((ActivityCallbacks) activity).closeDrawerIfShowing();
-        }
     }
 
     @Override public void onResume() {
@@ -59,10 +53,6 @@ public abstract class AttachFragment extends Fragment implements OnBackPressedLi
         if (!AppHelper.preventOnResume && activity instanceof MainActivity) {
             ((MainActivity) activity).setFragment(this);
         }
-        if (activity instanceof ActivityCallbacks) {
-            ((ActivityCallbacks) activity).shouldLoadFragment(getFragmentId(), true);
-        }
-
         checkMenuItem();
     }
 

@@ -19,10 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Accueil</string>
   <string name="app_manager">Gestionnaire d\'Applications</string>
-  <string name="get_busybox">Installer BusyBox</string>
   <string name="message_loading">Chargement, veuillez patienter&#8230;</string>
   <string name="action_press_again">Appuyez de nouveau pour sortir!</string>
-  <string name="dialog_warning">Avertissement!</string>
   <string name="refresh">Actualiser</string>
   <string name="cold">Froid</string>
   <string name="enable">Activer</string>
@@ -31,7 +29,6 @@
   <string name="disable_msg">%s sera désactivé.\n\nContinuer?</string>
   <string name="filter">Filtre</string>
   <string name="preferences">Préférences</string>
-  <string name="media_scan_trigger">Déclencher le scan média</string>
   <string name="force_stop">Forcer l\'arrêt </string>
   <string name="app_details">Détails de l\'application</string>
   <string name="clear_cache">Vider le cache</string>
@@ -48,7 +45,6 @@
   <string name="cache">Cache</string>
   <string name="applying_wait">En appliquant, par faveur attendez...</string>
   <string name="open_play_store">Voir application sur Google Play\u2122</string>
-  <string name="pick_file">Choisissez un fichier</string>
   <string name="user_interface">Interface</string>
   <string name="good">Bon</string>
   <string name="dead">Mort</string>
@@ -60,6 +56,5 @@
   <string name="uninstall_msg">Voulez-vous vraiment désinstaller \"%s\" ?\nCette action ne peut pas être annulée !</string>
   <string name="uninstall_success">\"%s\" désintallée avec succès</string>
   <string name="system">Système</string>
-  <string name="touch_boost">Boost tactile</string>
   <string name="permissions">Autorisations</string>
 </resources>

@@ -19,15 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Startseite</string>
   <string name="app_manager">Anwendungs-Manager</string>
-  <string name="get_busybox">BusyBox installieren</string>
-  <string name="checking_requirements">Abhängigkeiten werden überprüft&#8230;</string>
-  <string name="please_wait">Einen Augenblick bitte&#8230;</string>
-  <string name="missing_requirements">Fehlende Voraussetzungen</string>
   <string name="message_loading">Lade, bitte einen Moment Geduld&#8230;</string>
   <string name="action_press_again">Drücke erneut zum Beenden!</string>
-  <string name="dialog_warning">Achtung!</string>
-  <string name="dialog_warning_su_version">Der installierte Superuser \"%s\" ist funktionsfähig, wurde aber mit Device Control nicht getestet und es können Fehler auftreten.\nFalls irgendwelche Probleme auftreten, wird die Verwendung von \"SuperSU\" empfohlen!</string>
-  <string name="dialog_action_never_show_again">Nicht wieder zeigen</string>
   <string name="refresh">Aktualisieren</string>
   <string name="cold">Kalt</string>
   <string name="enable">Aktivieren</string>
@@ -43,7 +36,6 @@
   <string name="action_completed">Aktion erfolgreich abgeschlossen!</string>
   <string name="filter">Filter</string>
   <string name="preferences">Einstellungen</string>
-  <string name="media_scan_trigger">Media-Scanner auslösen</string>
   <string name="media_scan_triggered">Media Scan ausgelöst, dies kann eine Weile dauern!</string>
   <string name="force_stop">Beenden erzwingen</string>
   <string name="app_details">Anwendungsdetails</string>
@@ -61,7 +53,6 @@
   <string name="cache">Cache</string>
   <string name="applying_wait">Anwenden, bitte warten&#8230;</string>
   <string name="open_play_store">Anwendung auf Google Play\u2122 anzeigen</string>
-  <string name="pick_file">Datei wählen</string>
   <string name="something_went_wrong">Entschuldigung, aber etwas ist schiefgelaufen!</string>
   <string name="user_interface">Benutzeroberfläche</string>
   <string name="good">Gut</string>
@@ -79,7 +70,6 @@
   <string name="disabled">Deaktiviert</string>
   <string name="user">Benutzer</string>
   <string name="system">System</string>
-  <string name="touch_boost">Berührungs-Boost</string>
   <string name="permissions">Berechtigungen</string>
   <string name="security_settings_desc">Diese Anwendung kann auf die folgenden Funktionen deines Gerätes zugreifen:</string>
   <string name="join_two_items"><xliff:g id="first_item">%1$s</xliff:g> und <xliff:g id="second_item">%2$s</xliff:g></string>
@@ -91,8 +81,6 @@
   <string name="no_items_found">Keine Einträge gefunden&#8230;</string>
   <string name="could_not_launch_activity">Anwendung konnte nicht gestartet werden</string>
   <string name="launch_app">App starten</string>
-  <string name="dialog_permission_title">Berechtigungen</string>
-  <string name="dialog_permission_summary">Seit Android M müssen einige Berechtigungen vom Anwender genehmigt werden.\n\nDevice Control fordert Berechtigungen für Telefonie, externer Speicher und Standort ein, um ordnungsgemäß zu funktionieren.\nOhne diese Berechtigungen funktionieren gewisse Funktionen leider nicht, da diese von den Berechtigungen abhängen.</string>
   <string name="cleared_cache">Cache wurde geleert!</string>
   <string name="cleared_data">Daten wurden gelöscht!</string>
   <string name="force_stopped_app">App wurde erzwungen beendet!</string>

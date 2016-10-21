@@ -19,10 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Головна</string>
   <string name="app_manager">Менеджер додатків</string>
-  <string name="get_busybox">Встановити BusyBox</string>
   <string name="message_loading">Завантаження, зачекайте&#8230;</string>
   <string name="action_press_again">Натисніть ще раз щоб вийти.</string>
-  <string name="dialog_warning">Увага!</string>
   <string name="refresh">Оновити</string>
   <string name="cold">Холодний</string>
   <string name="enable">Увімкнення</string>
@@ -31,7 +29,6 @@
   <string name="disable_msg">%s буде вимкнено.\n\nПродовжити?</string>
   <string name="filter">Фільтр</string>
   <string name="preferences">Параметри</string>
-  <string name="media_scan_trigger">Запустити сканування медіафайлів</string>
   <string name="clear_cache">Очистити кеш</string>
   <string name="clear_data">Очистити дані</string>
   <string name="total">Всього</string>
@@ -44,7 +41,6 @@
   <string name="cache">Кеш</string>
   <string name="applying_wait">Застосування, будь ласка, зачекайте&#8230;</string>
   <string name="open_play_store">Відкрити програму в Google Play\u2122</string>
-  <string name="pick_file">Вибрати файл</string>
   <string name="user_interface">Інтерфейс</string>
   <string name="good">Добре</string>
   <string name="dead">Вийшов з ладу</string>

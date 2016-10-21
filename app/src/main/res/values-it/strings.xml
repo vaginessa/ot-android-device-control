@@ -19,12 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Home</string>
   <string name="app_manager">App manager</string>
-  <string name="get_busybox">Installa BusyBox</string>
-  <string name="checking_requirements">Verifica requisiti&#8230;</string>
-  <string name="please_wait">Attendere&#8230;</string>
   <string name="message_loading">Caricamento, attendere prego&#8230;</string>
   <string name="action_press_again">Premere nuovamente per uscire!</string>
-  <string name="dialog_warning">Attenzione!</string>
   <string name="refresh">Aggiorna</string>
   <string name="cold">Freddo</string>
   <string name="enable">Abilita</string>
@@ -33,7 +29,6 @@
   <string name="disable_msg">%s sarà disabilitato.\n\nContinuare?</string>
   <string name="filter">Filtro</string>
   <string name="preferences">Impostazioni</string>
-  <string name="media_scan_trigger">Avvia scansione media</string>
   <string name="force_stop">Arresto forzato</string>
   <string name="app_details">Dettagli dell\'applicazione</string>
   <string name="clear_cache">Pulisci la cache</string>
@@ -50,7 +45,6 @@
   <string name="cache">Cache</string>
   <string name="applying_wait">Applicazione in corso, attendere prego...</string>
   <string name="open_play_store">Visualizza l\'applicazione su Google Play\u2122</string>
-  <string name="pick_file">Seleziona un file</string>
   <string name="user_interface">Interfaccia</string>
   <string name="good">Buona</string>
   <string name="dead">Morta</string>
@@ -62,5 +56,4 @@
   <string name="uninstall_msg">Voi veramente disinstallare \"%s\"?\nQuesta azione non può essere annullata!</string>
   <string name="uninstall_success">\"%s\" disinstallata con successo</string>
   <string name="system">Sistema</string>
-  <string name="touch_boost">Touch boost</string>
 </resources>

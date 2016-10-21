@@ -19,11 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">首页</string>
   <string name="app_manager">应用管理器</string>
-  <string name="get_busybox">安装 BusyBox</string>
-  <string name="checking_requirements">检查要求&#8230;</string>
   <string name="message_loading">加载中，请稍后&#8230;&#8230;</string>
   <string name="action_press_again">再按一次退出</string>
-  <string name="dialog_warning">警告！</string>
   <string name="refresh">刷新</string>
   <string name="cold">冷</string>
   <string name="enable">启用</string>
@@ -32,7 +29,6 @@
   <string name="disable_msg">%s 将会禁用.\n\n是否继续？</string>
   <string name="filter">过滤器</string>
   <string name="preferences">首选项</string>
-  <string name="media_scan_trigger">触发媒体扫描</string>
   <string name="media_scan_triggered">媒体扫描已开始，可这能需要一点时间</string>
   <string name="force_stop">强行停止</string>
   <string name="app_details">应用详情</string>
@@ -50,7 +46,6 @@
   <string name="cache">缓存</string>
   <string name="applying_wait">应用，请稍候...</string>
   <string name="open_play_store">在 Google Play\u2122 浏览应用</string>
-  <string name="pick_file">选择文件</string>
   <string name="something_went_wrong">抱歉，但事情出了错 ！</string>
   <string name="user_interface">界面</string>
   <string name="good">良好</string>
@@ -65,7 +60,6 @@
   <string name="uninstall_success">成功卸载\"%s\"</string>
   <string name="disabled">禁用</string>
   <string name="system">系统</string>
-  <string name="touch_boost">触摸增强</string>
   <string name="permissions">权限</string>
   <string name="security_settings_desc">这个app可以访问您的设备上的一下内容：</string>
   <string name="join_two_items"><xliff:g id="first_item">%1$s</xliff:g> 和 <xliff:g id="second_item">%2$s</xliff:g></string>

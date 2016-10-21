@@ -19,10 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">首頁</string>
   <string name="app_manager">應用程式管理器</string>
-  <string name="get_busybox">安裝 BusyBox</string>
   <string name="message_loading">正在載入，請稍後...</string>
   <string name="action_press_again">再按一次以退出</string>
-  <string name="dialog_warning">警告！</string>
   <string name="refresh">重新整理</string>
   <string name="cold">冷</string>
   <string name="enable">啟用</string>
@@ -40,7 +38,6 @@
   <string name="ext">外部</string>
   <string name="cache">快取記憶體</string>
   <string name="applying_wait">應用中，請稍候...</string>
-  <string name="pick_file">選擇一個檔案</string>
   <string name="user_interface">介面</string>
   <string name="good">良好</string>
   <string name="dead">電池耗盡</string>
@@ -49,5 +46,4 @@
   <string name="uninstalling">正在移除...</string>
   <string name="disabled">禁用</string>
   <string name="system">系統</string>
-  <string name="touch_boost">觸摸加速</string>
 </resources>

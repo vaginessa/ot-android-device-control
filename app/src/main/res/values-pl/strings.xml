@@ -19,10 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Home</string>
   <string name="app_manager">Menedżer aplikacji</string>
-  <string name="get_busybox">Zainstaluj BusyBox</string>
   <string name="message_loading">Trwa ładowanie, proszę czekać&#8230;</string>
   <string name="action_press_again">Naciśnij jeszcze raz aby wyjść!</string>
-  <string name="dialog_warning">Uwaga!</string>
   <string name="refresh">Odśwież</string>
   <string name="cold">Zimny</string>
   <string name="enable">Włącz</string>
@@ -31,7 +29,6 @@
   <string name="disable_msg">%s będzie wyłączone.\n\nKontynuować?</string>
   <string name="filter">Filtruj</string>
   <string name="preferences">Preferencje</string>
-  <string name="media_scan_trigger">Uruchom skanowanie mediów</string>
   <string name="media_scan_triggered">Uruchomiono skanowanie mediów, to może chwilę potrwać!</string>
   <string name="force_stop">Wymuś zamknięcie</string>
   <string name="app_details">Szczegóły dotyczące aplikacji</string>
@@ -49,7 +46,6 @@
   <string name="cache">Pamięć podręczna</string>
   <string name="applying_wait">Stosowanie, proszę czekać&#8230;</string>
   <string name="open_play_store">Zobacz aplikację w Google Play\u2122</string>
-  <string name="pick_file">Wybierz plik</string>
   <string name="user_interface">Interfejs</string>
   <string name="good">Dobry</string>
   <string name="dead">Wyczerpany</string>

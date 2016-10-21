@@ -19,14 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Inicio</string>
   <string name="app_manager">Gestor de Aplicaciones</string>
-  <string name="get_busybox">Instalar BusyBox</string>
-  <string name="checking_requirements">Comprobando requisitos&#8230;</string>
-  <string name="please_wait">Espere, por favor&#8230;</string>
   <string name="message_loading">Cargando, por favor espere&#8230;</string>
   <string name="action_press_again">¡Pulse una vez más para salir!</string>
-  <string name="dialog_warning">¡Advertencia!</string>
-  <string name="dialog_warning_su_version">El superusuario instalado \"%s\" es funcional pero quiza no pueda trabajar correctamente con Device Control, porque no lo he probado\nSi tiene algun problema, le recomiendo usar \"SuperSU\"!</string>
-  <string name="dialog_action_never_show_again">No mostrar de nuevo</string>
   <string name="refresh">Refrescar</string>
   <string name="cold">Frío</string>
   <string name="enable">Habilitar</string>
@@ -35,7 +29,6 @@
   <string name="disable_msg">%s va a ser deshabilitado.\n\n¿Continuar?</string>
   <string name="filter">Filtro</string>
   <string name="preferences">Preferencias</string>
-  <string name="media_scan_trigger">Disparador del análisis de medios</string>
   <string name="clear_cache">Limpiar la cache</string>
   <string name="clear_data">Limpiar datos</string>
   <string name="total">Total</string>
@@ -48,7 +41,6 @@
   <string name="cache">Cache</string>
   <string name="applying_wait">Aplicando, por favor espere...</string>
   <string name="open_play_store">Ver aplicación en Google Play\u2122</string>
-  <string name="pick_file">Elija un archivo</string>
   <string name="user_interface">Interfaz</string>
   <string name="system">Sistema</string>
 </resources>

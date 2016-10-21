@@ -19,10 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Domů</string>
   <string name="app_manager">Správce aplikací</string>
-  <string name="get_busybox">Instalovat BusyBox</string>
   <string name="message_loading">Načítání, počkejte prosím...</string>
   <string name="action_press_again">Stiskněte znovu pro ukončení!</string>
-  <string name="dialog_warning">Varování!</string>
   <string name="refresh">Obnovení</string>
   <string name="cold">Studené</string>
   <string name="enable">Povolit</string>
@@ -31,7 +29,6 @@
   <string name="disable_msg">%s bude zakázán\n\nPokračovat?</string>
   <string name="filter">Filtr</string>
   <string name="preferences">Předvolby</string>
-  <string name="media_scan_trigger">Spouštěč skenování médií</string>
   <string name="clear_cache">Vymazat cache</string>
   <string name="clear_data">Vymazat data</string>
   <string name="total">Celkem</string>
@@ -44,7 +41,6 @@
   <string name="cache">Cache</string>
   <string name="applying_wait">Provádím, vyčkejte prosím&#8230;</string>
   <string name="open_play_store">Zobrazit aplikaci na Google Play\u2122</string>
-  <string name="pick_file">Vybrat soubor</string>
   <string name="user_interface">Rozhraní</string>
   <string name="system">Systém</string>
 </resources>

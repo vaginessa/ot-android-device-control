@@ -19,11 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Почетна</string>
   <string name="app_manager">Управљач апликацијама</string>
-  <string name="get_busybox">Инсталирајте BusyBox</string>
-  <string name="checking_requirements">Проверавам зависности&#8230;</string>
   <string name="message_loading">Учитавање, молимо сачекајте&#8230;</string>
   <string name="action_press_again">Притисните још једном за излаз!</string>
-  <string name="dialog_warning">Упозорење!</string>
   <string name="refresh">Оcвежи</string>
   <string name="cold">Хладно</string>
   <string name="enable">Омогући</string>
@@ -37,7 +34,6 @@
   <string name="action_completed">Акција успешно завршена!</string>
   <string name="filter">Филтер</string>
   <string name="preferences">Подешавања</string>
-  <string name="media_scan_trigger">Покрени скенирање медија</string>
   <string name="media_scan_triggered">Скенирање медија покренуто, ово може потрајати!</string>
   <string name="force_stop">Приморај заустављање</string>
   <string name="app_details">Детаљи апликације</string>
@@ -55,7 +51,6 @@
   <string name="cache">Кеш</string>
   <string name="applying_wait">Примењујем, молим сачекајте&#8230;</string>
   <string name="open_play_store">Погледајте продавницу у Play продавници\u2122</string>
-  <string name="pick_file">Изаберите датотеку</string>
   <string name="something_went_wrong">Нажалост, десило се нешто неочекивано!</string>
   <string name="user_interface">Интерфејс</string>
   <string name="good">Добро</string>
@@ -73,7 +68,6 @@
   <string name="disabled">Онемогућено</string>
   <string name="user">Корисник</string>
   <string name="system">Систем</string>
-  <string name="touch_boost">Побољшање додира</string>
   <string name="permissions">Дозволе</string>
   <string name="security_settings_desc">Ова апликација може приступити следећем на вашим уређајима:</string>
   <string name="join_two_items"><xliff:g id="first_item">%1$s</xliff:g> и <xliff:g id="second_item">%2$s</xliff:g></string>

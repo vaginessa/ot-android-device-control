@@ -28,7 +28,7 @@ import org.namelessrom.devicecontrol.App;
 import org.namelessrom.devicecontrol.models.Constants;
 import org.namelessrom.devicecontrol.R;
 import org.namelessrom.devicecontrol.models.DeviceConfig;
-import org.namelessrom.devicecontrol.theme.AppResources;
+import org.namelessrom.devicecontrol.models.AppResources;
 import org.namelessrom.devicecontrol.utils.Utils;
 
 import alexander.martinz.libs.materialpreferences.MaterialListPreference;

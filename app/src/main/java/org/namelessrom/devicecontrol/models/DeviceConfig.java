@@ -33,13 +33,7 @@ public class DeviceConfig {
     public static final int THEME_NIGHT = 3;
     private transient static final String NAME = "DeviceConfig";
     private transient static DeviceConfig instance;
-    public boolean dcFirstStart;
     public int themeMode = THEME_NIGHT;
-    public boolean skipChecks;
-    public boolean ignoreDialogWarningBusyBox;
-    public boolean ignoreDialogWarningRoot;
-    public boolean ignoreDialogWarningSuVersion;
-    // TODO: readd
     public String suShellContext = "normal"; //Shell.CONTEXT_NORMAL;
     public int appVersion;
 
@@ -71,7 +65,6 @@ public class DeviceConfig {
 
     private void ensureDefaults() {
         if (TextUtils.isEmpty(suShellContext)) {
-            // TODO: readd
             suShellContext = "normal";//Shell.CONTEXT_NORMAL;
         }
     }

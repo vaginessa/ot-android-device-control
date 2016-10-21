@@ -19,10 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Acasă</string>
   <string name="app_manager">App manager</string>
-  <string name="get_busybox">Instalează BusyBox</string>
   <string name="message_loading">Se încarcă, va rugăm așteptați&#8230;</string>
   <string name="action_press_again">Apăsaţi din nou pentru a ieşi!</string>
-  <string name="dialog_warning">Atenție!</string>
   <string name="refresh">Reîmprospătare</string>
   <string name="cold">Rece</string>
   <string name="enable">Activați</string>
@@ -31,7 +29,6 @@
   <string name="disable_msg">%s va fi dezactivat.\n\nContinuați?</string>
   <string name="filter">Filtru</string>
   <string name="preferences">Preferinţe</string>
-  <string name="media_scan_trigger">Activați scanarea de mass-media</string>
   <string name="force_stop">Oprire forțată</string>
   <string name="app_details">Detaliile aplicației</string>
   <string name="clear_cache">Goliţi Cache-ul</string>
@@ -48,7 +45,6 @@
   <string name="cache">Cache</string>
   <string name="applying_wait">Se aplică, așteaptă...</string>
   <string name="open_play_store">Vezi aplicația în Google Play\u2122</string>
-  <string name="pick_file">Alege un fişier</string>
   <string name="user_interface">Interfață</string>
   <string name="good">Bun</string>
   <string name="dead">Mort</string>
@@ -60,5 +56,4 @@
   <string name="uninstall_msg">Doriţi să dezinstalaţi \"%s\"?\nAceastă acţiune nu poate fi anulată!</string>
   <string name="uninstall_success">Dezinstalat cu succes \"%s\"</string>
   <string name="system">Sistem</string>
-  <string name="touch_boost">Mărire impuls de atingere</string>
 </resources>

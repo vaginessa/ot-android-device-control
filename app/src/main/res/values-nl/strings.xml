@@ -19,11 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Thuis</string>
   <string name="app_manager">App-beheerder</string>
-  <string name="get_busybox">Installeer BusyBox</string>
-  <string name="checking_requirements">Controleren op eisen&#8230;</string>
   <string name="message_loading">Laden, gelieve te wachten&#8230;</string>
   <string name="action_press_again">Druk nogmaals om af te sluiten!</string>
-  <string name="dialog_warning">Waarschuwing!</string>
   <string name="refresh">Vernieuwen</string>
   <string name="cold">Koud</string>
   <string name="enable">Inschakelen</string>
@@ -32,7 +29,6 @@
   <string name="disable_msg">%s zal worden uitgeschakeld.\n\nDoorgaan?</string>
   <string name="filter">Filter</string>
   <string name="preferences">Voorkeuren</string>
-  <string name="media_scan_trigger">Trigger media scan</string>
   <string name="media_scan_triggered">Media scan is geactiveerd, dit kan een tijdje duren!</string>
   <string name="force_stop">Geforceerd stoppen</string>
   <string name="app_details">Toepassings details</string>
@@ -50,7 +46,6 @@
   <string name="cache">Cache</string>
   <string name="applying_wait">Toepassen, even geduld&#8230;</string>
   <string name="open_play_store">Weergave toepassing op Google Play\u2122</string>
-  <string name="pick_file">Kies een bestand</string>
   <string name="something_went_wrong">Sorry, maar er is iets misgegaan!</string>
   <string name="user_interface">Uiterlijk</string>
   <string name="good">Goed</string>
@@ -65,7 +60,6 @@
   <string name="uninstall_success">Succesvol \"%s\" gedeïnstalleerd</string>
   <string name="disabled">Uitgeschakeld</string>
   <string name="system">Systeem</string>
-  <string name="touch_boost">Aanraking versterken</string>
   <string name="permissions">Rechten</string>
   <string name="security_settings_desc">Deze app kan het toegang krijgen tot het volgende op uw apparaten:</string>
   <string name="join_two_items"><xliff:g id="first_item">%1$s</xliff:g> en <xliff:g id="second_item">%2$s</xliff:g></string>

@@ -1,4 +1,4 @@
-package org.namelessrom.devicecontrol.preferences;
+package org.namelessrom.devicecontrol.views.preferences;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -8,7 +8,6 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 
 import org.namelessrom.devicecontrol.R;
-import org.namelessrom.devicecontrol.theme.AppResources;
 
 import alexander.martinz.libs.materialpreferences.MaterialPreferenceCategory;
 

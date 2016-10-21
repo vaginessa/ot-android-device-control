@@ -19,10 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Inici</string>
   <string name="app_manager">Gestor d\'Aplicacions</string>
-  <string name="get_busybox">Instal·lar BusyBox</string>
   <string name="message_loading">Carregant, sisplau esperi&#8230;</string>
   <string name="action_press_again">Feu clic una vegada més per sortir!</string>
-  <string name="dialog_warning">Perill!</string>
   <string name="refresh">Refrescar</string>
   <string name="cold">Fred</string>
   <string name="enable">Habilitar</string>
@@ -31,7 +29,6 @@
   <string name="disable_msg">%s serà deshabilitat.\n\nContinuar?</string>
   <string name="filter">Filtre</string>
   <string name="preferences">Preferències</string>
-  <string name="media_scan_trigger">Disparador de l\'anàlisi de mitjans</string>
   <string name="clear_cache">Netejar la cache</string>
   <string name="clear_data">Netejar dades</string>
   <string name="total">Total</string>
@@ -44,7 +41,6 @@
   <string name="cache">Cache</string>
   <string name="applying_wait">Aplicant, per favor esperi...</string>
   <string name="open_play_store">Veure aplicació en Google Play\u2122</string>
-  <string name="pick_file">Triï un arxiu</string>
   <string name="user_interface">Interfície</string>
   <string name="system">Sistema</string>
 </resources>

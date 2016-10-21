@@ -29,7 +29,7 @@ import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 
 import org.namelessrom.devicecontrol.App;
-import org.namelessrom.devicecontrol.theme.AppResources;
+import org.namelessrom.devicecontrol.models.AppResources;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

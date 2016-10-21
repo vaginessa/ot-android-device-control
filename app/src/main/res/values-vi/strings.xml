@@ -19,10 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="home">Home</string>
   <string name="app_manager">Quản lý ứng dụng</string>
-  <string name="get_busybox">Cài đặt BusyBox</string>
   <string name="message_loading">Đang tải, vui lòng đợi&#8230;</string>
   <string name="action_press_again">Ấn thêm lần nữa để thoát!</string>
-  <string name="dialog_warning">Chú ý!</string>
   <string name="refresh">Làm mới</string>
   <string name="cold">Lạnh</string>
   <string name="enable">Bật</string>
@@ -31,7 +29,6 @@
   <string name="disable_msg">%s sẽ tắt.\n\nVẫn tiếp tục?</string>
   <string name="filter">Bộ lọc</string>
   <string name="preferences">Tùy chỉnh cá nhân</string>
-  <string name="media_scan_trigger">Kích hoạt tìm kiếm tập tin truyền thông</string>
   <string name="force_stop">Buộc dừng</string>
   <string name="app_details">Chi tiếtứng dụng</string>
   <string name="clear_cache">Xóa bộ nhớ đệm</string>
@@ -48,7 +45,6 @@
   <string name="cache">Bộ nhớ đệm</string>
   <string name="applying_wait">Đang áp dụng, vui lòng chờ...</string>
   <string name="open_play_store">Xem Ứng dụng trên Google Play\u2122</string>
-  <string name="pick_file">Chọn một tập tin</string>
   <string name="user_interface">Giao diện</string>
   <string name="good">Tốt</string>
   <string name="dead">Chết</string>
@@ -60,5 +56,4 @@
   <string name="uninstall_msg">Bạn có thực sự muốn gỡ cài đặt \"%s\"?\nThao tác này không thể quay lại!</string>
   <string name="uninstall_success">Gỡ cài đặt xong \"%s\"</string>
   <string name="system">Hệ thống</string>
-  <string name="touch_boost">Tăng độ nhay cảm ứng</string>
 </resources>

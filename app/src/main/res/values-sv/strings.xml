@@ -16,11 +16,8 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="get_busybox">Installera BusyBox</string>
-  <string name="checking_requirements">Kontrollera krav...</string>
   <string name="message_loading">Laddar, vänta...</string>
   <string name="action_press_again">Tryck igen för att avsluta!</string>
-  <string name="dialog_warning">Varning!</string>
   <string name="home">Hem</string>
   <string name="app_manager">App hanterare</string>
   <string name="refresh">Uppdatera</string>

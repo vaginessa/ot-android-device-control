@@ -22,21 +22,8 @@
     <string name="home">Home</string>
     <string name="app_manager">App manager</string>
 
-    <string name="warning_root">Device Control requires a rooted device to fully work!</string>
-    <string name="warning_root_note">Without a rooted device Device Control is still functional but most features are limited!</string>
-    <string name="warning_busybox">Device Control requires BusyBox to fully work!</string>
-    <string name="warning_busybox_note">BusyBox is required because not every system provides the same set of tools, which can lead to bugs and instability.\n\nBusyBox is uniform and works the same way on every device.</string>
-    <string name="get_busybox">Install BusyBox</string>
-    <string name="checking_requirements">Checking requirements…</string>
-    <string name="please_wait">Please wait…</string>
-    <string name="missing_requirements">Missing requirements</string>
-    <string name="ignore">Ignore</string>
     <string name="message_loading">Loading, please stand by…</string>
     <string name="action_press_again">Press once again to exit!</string>
-
-    <string name="dialog_warning">Warning!</string>
-    <string name="dialog_warning_su_version">Your installed superuser \"%s\" is functional but might not work reliable with Device Control, because I have not tested it.\nIf you encounter any problems, using \"SuperSU\" is recommended!</string>
-    <string name="dialog_action_never_show_again">Never show again</string>
 
     <string name="refresh">Refresh</string>
     <string name="cold">Cold</string>
@@ -54,7 +41,6 @@
     <string name="action_completed">Action completed successfully!</string>
     <string name="filter">Filter</string>
     <string name="preferences">Preferences</string>
-    <string name="media_scan_trigger">Trigger media scan</string>
     <string name="media_scan_triggered">Media scan triggered, this may take a while!</string>
     <string name="force_stop">Force stop</string>
     <string name="app_details">Application details</string>
@@ -72,7 +58,6 @@
     <string name="cache">Cache</string>
     <string name="applying_wait">Applying, please wait…</string>
     <string name="open_play_store">View application at Google Play\u2122</string>
-    <string name="pick_file">Pick a file</string>
     <string name="something_went_wrong">Sorry but something went wrong!</string>
     <string name="user_interface">Interface</string>
     <string name="good">Good</string>
@@ -92,7 +77,6 @@
     <string name="disabled">Disabled</string>
     <string name="user">User</string>
     <string name="system">System</string>
-    <string name="touch_boost">Touch boost</string>
     <string name="permissions">Permissions</string>
     <string name="security_settings_desc">This app can access the following on your devices:</string>
     <string name="join_two_items"><xliff:g id="first_item">%1$s</xliff:g> and <xliff:g id="second_item">%2$s</xliff:g></string>
@@ -105,9 +89,6 @@
     <string name="could_not_launch_activity">Could not launch activity</string>
     <string name="launch_app">Launch app</string>
 
-    <string name="dialog_permission_title">Permissions</string>
-    <string name="dialog_permission_summary">Since Android M some permissions need to get granted explicitly by the user.\n\nDevice Control asks you for telephony, external storage and location permissions, to function properly.\nWithout them, some features like device information may break, as they are coupled to these permissions.</string>
-
     <!-- App -->
 
     <!-- Wizard -->
@@ -118,9 +99,6 @@
 
     <string name="low_end_gfx">Reduced graphic effects</string>
     <string name="low_end_gfx_summary">Use less graphic effects, which may work better on some devices</string>
-
-    <string name="quick_actions">Quick actions</string>
-    <string name="quick_actions_content">Press to open quick actions</string>
 
     <string name="automatically">Automatically</string>
     <string name="day">Day</string>
