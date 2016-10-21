@@ -17,8 +17,5 @@
   ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="gestures">Eleet</string>
-  <string name="backup">Varmuuskopio</string>
   <string name="no_items_found">Kohteita ei löytynyt&#8230;</string>
-  <string name="finish">Valmis</string>
 </resources>

@@ -17,8 +17,7 @@ Copyright (C) 2012  James Roberts
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/seekbar_dialog"
-    android:layout_width="wrap_content"
+              android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
     android:orientation="horizontal"

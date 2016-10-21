@@ -19,7 +19,6 @@ package org.namelessrom.devicecontrol.modules.appmanager;
 
 import android.support.v4.app.Fragment;
 
-import org.namelessrom.devicecontrol.DeviceConstants;
 import org.namelessrom.devicecontrol.R;
 import org.namelessrom.devicecontrol.views.AttachViewPagerFragment;
 
@@ -27,7 +26,7 @@ import java.util.ArrayList;
 
 public class AppListFragment extends AttachViewPagerFragment {
 
-    @Override protected int getFragmentId() { return DeviceConstants.ID_TOOLS_APP_MANAGER; }
+    @Override protected int getFragmentId() { return AppListFragment.class.hashCode(); }
 
     @Override public ViewPagerAdapter getPagerAdapter() {
         final ArrayList<Fragment> fragments = new ArrayList<>(3);

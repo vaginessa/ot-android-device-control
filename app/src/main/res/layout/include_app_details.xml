@@ -106,7 +106,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/app_controls"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -158,7 +157,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/cache_controls"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"

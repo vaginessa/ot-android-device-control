@@ -27,7 +27,6 @@ import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 
 import org.namelessrom.devicecontrol.models.DeviceConfig;
-import org.namelessrom.devicecontrol.utils.CustomTabsHelper;
 
 import java.io.File;
 import java.util.Arrays;
@@ -52,21 +51,12 @@ public class App extends android.app.Application {
     private static App sInstance;
     private static boolean enableDebug = BuildConfig.DEBUG;
 
-    private CustomTabsHelper customTabsHelper;
-
     public static App get() {
         return App.sInstance;
     }
 
     public static App get(Context context) {
         return ((App) context.getApplicationContext());
-    }
-
-    public CustomTabsHelper getCustomTabsHelper() {
-        if (customTabsHelper == null) {
-            customTabsHelper = new CustomTabsHelper(this);
-        }
-        return customTabsHelper;
     }
 
     @Override public void onCreate() {
@@ -81,13 +71,6 @@ public class App extends android.app.Application {
                 .withTimber(true)
                 .withDebugTree(buildDebugTree())
                 .withProductionTree(buildProductionTree());
-
-//        if (!enableDebug) {
-//            final FabricConfig fabricConfig = new FabricConfig(universalDebug)
-//                    .withAnswers()
-//                    .withCrashlytics();
-//            universalDebug.withExtension(fabricConfig);
-//        }
 
         universalDebug.install();
         ShellManager.enableDebug(App.enableDebug);

@@ -22,7 +22,6 @@
 
     <!-- Interface -->
     <org.namelessrom.devicecontrol.preferences.CustomPreferenceCategoryMaterial
-        android:id="@+id/cat_prefs_interface"
         style="@style/MaterialPreferences.Default"
         app:prefTitle="@string/user_interface">
 

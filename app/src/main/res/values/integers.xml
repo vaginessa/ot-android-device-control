@@ -16,5 +16,4 @@
 -->
 <resources>
     <integer name="animation_time">400</integer>
-    <integer name="animation_time_half">200</integer>
 </resources>

@@ -16,9 +16,6 @@
 -->
 <resources>
     <!-- Wizard -->
-    <dimen name="step_pager_tab_width">32dp</dimen>
-    <dimen name="step_pager_tab_height">3dp</dimen>
-    <dimen name="step_pager_tab_spacing">4dp</dimen>
 
     <!-- Material menu -->
     <dimen name="mm_up_arrow_margin">-16dp</dimen>

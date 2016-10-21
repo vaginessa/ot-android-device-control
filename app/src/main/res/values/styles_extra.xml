@@ -16,16 +16,6 @@
 -->
 <resources>
     <!-- Wizard -->
-    <style name="SetupWizardPageTitle">
-        <item name="android:id">@android:id/title</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">@dimen/title_top_margin</item>
-        <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:textSize">24sp</item>
-        <item name="android:textStyle">italic|bold</item>
-        <item name="android:textColor">?colorAccent</item>
-    </style>
 
     <style name="AppManagerBottomSheetStyle" parent="@style/BottomSheet">
         <!-- Tints the menu item icon to the specified color -->

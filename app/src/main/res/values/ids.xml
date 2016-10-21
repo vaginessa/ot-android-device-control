@@ -15,7 +15,4 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources>
-    <item name="divider" type="id" />
-    <item name="list_item_container" type="id" />
-    <item name="tools" type="id" />
 </resources>

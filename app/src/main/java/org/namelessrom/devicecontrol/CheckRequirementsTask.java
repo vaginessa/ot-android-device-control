@@ -42,7 +42,6 @@ import java.util.Iterator;
 
 import at.amartinz.execution.BusyBox;
 import at.amartinz.execution.RootCheck;
-import at.amartinz.hardware.device.Device;
 
 public class CheckRequirementsTask extends AsyncTask<Void, Void, Void> {
     private static final String XPOSED_INSTALLER_PACAKGE = "de.robv.android.xposed.installer";
@@ -242,12 +241,6 @@ public class CheckRequirementsTask extends AsyncTask<Void, Void, Void> {
                 deviceConfig.save();
 
                 dialog.dismiss();
-            }
-        });
-        builder.setNeutralButton(R.string.more_information, new DialogInterface.OnClickListener() {
-            @Override public void onClick(DialogInterface dialog, int which) {
-                final String url = String.format("https://www.google.com/#q=how+to+root+%s", Device.get(mainActivity).model);
-                ((App) mainActivity.getApplicationContext()).getCustomTabsHelper().launchUrl(mainActivity, url);
             }
         });
         builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {

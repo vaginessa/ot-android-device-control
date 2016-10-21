@@ -28,10 +28,4 @@
     <color name="graph_background">@color/dark_background</color>
     <color name="graph_text_color">#fff</color>
 
-    <color name="drawer_icon">#FFB71C1C</color>
-    <color name="drawer_icon_checked">@android:color/white</color>
-    <color name="drawer_icon_disabled">#80B71C1C</color>
-    <color name="drawer_text">@android:color/white</color>
-    <color name="drawer_text_checked">@android:color/white</color>
-    <color name="drawer_text_disabled">#80FFFFFF</color>
 </resources>
