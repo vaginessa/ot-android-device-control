@@ -93,7 +93,7 @@ public class SeekBarPreference extends Preference implements OnSeekBarChangeList
             mTitle = (TextView) layout.findViewById(android.R.id.title);
             return layout;
         } catch (Exception e) {
-            Timber.e(e, "Error creating seek bar preference");
+            Timber.e(e, "Error creating seek bar org.namelessrom.devicecontrol.externalsources.preference");
             return null;
         }
     }
@@ -140,7 +140,7 @@ public class SeekBarPreference extends Preference implements OnSeekBarChangeList
             final TextView unitsLeft = (TextView) layout.findViewById(R.id.seekBarPrefUnitsLeft);
             unitsLeft.setText(mUnitsLeft);
         } catch (Exception e) {
-            Timber.e(e, "Error updating seek bar preference");
+            Timber.e(e, "Error updating seek bar org.namelessrom.devicecontrol.externalsources.preference");
         }
     }
 

@@ -19,4 +19,11 @@
     <dimen name="step_pager_tab_width">32dp</dimen>
     <dimen name="step_pager_tab_height">3dp</dimen>
     <dimen name="step_pager_tab_spacing">4dp</dimen>
+
+    <!-- Material menu -->
+    <dimen name="mm_up_arrow_margin">-16dp</dimen>
+    <!-- support org.namelessrom.devicecontrol.externalsources.preference fragment -->
+    <dimen name="preference_fragment_padding_bottom">0dp</dimen>
+    <dimen name="preference_fragment_padding_side">16dp</dimen>
+    <integer name="preference_fragment_scrollbarStyle">0x02000000</integer>
 </resources>

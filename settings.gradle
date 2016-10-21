@@ -6,5 +6,5 @@ include ':app'
 //include ':HardwareLibrary'
 //project(':HardwareLibrary').projectDir = new File('modules/HardwareLibrary/hardware')
 
-include ':ExternalSources'
-project(':ExternalSources').projectDir = new File('modules/ExternalSources')
+//include ':ExternalSources'
+//project(':ExternalSources').projectDir = new File('modules/ExternalSources')

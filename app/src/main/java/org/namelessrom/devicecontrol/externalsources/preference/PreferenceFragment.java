@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package android.support.v4.preference;
+package org.namelessrom.devicecontrol.externalsources.preference;
 
 import android.content.Intent;
 import android.os.Build;
@@ -33,9 +33,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.lang.reflect.Method;
+import org.namelessrom.devicecontrol.R;
 
-import alexander.martinz.external.R;
+import java.lang.reflect.Method;
 
 public abstract class PreferenceFragment extends Fragment implements
         PreferenceManagerCompat.OnPreferenceTreeClickListener {
@@ -169,9 +169,9 @@ public abstract class PreferenceFragment extends Fragment implements
     }
 
     /**
-     * Returns the {@link android.preference.PreferenceManager} used by this fragment.
+     * Returns the {@link PreferenceManager} used by this fragment.
      *
-     * @return The {@link android.preference.PreferenceManager}.
+     * @return The {@link PreferenceManager}.
      */
     public PreferenceManager getPreferenceManager() {
         return mPreferenceManager;
@@ -180,7 +180,7 @@ public abstract class PreferenceFragment extends Fragment implements
     /**
      * Sets the root of the org.namelessrom.devicecontrol.externalsources.preference hierarchy that this fragment is showing.
      *
-     * @param preferenceScreen The root {@link android.preference.PreferenceScreen} of the org.namelessrom.devicecontrol.externalsources.preference hierarchy.
+     * @param preferenceScreen The root {@link PreferenceScreen} of the org.namelessrom.devicecontrol.externalsources.preference hierarchy.
      */
     public void setPreferenceScreen(PreferenceScreen preferenceScreen) {
         if (PreferenceManagerCompat.setPreferences(mPreferenceManager, preferenceScreen) &&
@@ -195,7 +195,7 @@ public abstract class PreferenceFragment extends Fragment implements
     /**
      * Gets the root of the org.namelessrom.devicecontrol.externalsources.preference hierarchy that this fragment is showing.
      *
-     * @return The {@link android.preference.PreferenceScreen} that is the root of the org.namelessrom.devicecontrol.externalsources.preference
+     * @return The {@link PreferenceScreen} that is the root of the org.namelessrom.devicecontrol.externalsources.preference
      * hierarchy.
      */
     public PreferenceScreen getPreferenceScreen() {
@@ -203,9 +203,9 @@ public abstract class PreferenceFragment extends Fragment implements
     }
 
     /**
-     * Adds preferences from activities that match the given {@link android.content.Intent}.
+     * Adds preferences from activities that match the given {@link Intent}.
      *
-     * @param intent The {@link android.content.Intent} to query activities.
+     * @param intent The {@link Intent} to query activities.
      */
     public void addPreferencesFromIntent(Intent intent) {
         requirePreferenceManager();
@@ -238,10 +238,10 @@ public abstract class PreferenceFragment extends Fragment implements
     }
 
     /**
-     * Finds a {@link android.preference.Preference} based on its key.
+     * Finds a {@link Preference} based on its key.
      *
      * @param key The key of the org.namelessrom.devicecontrol.externalsources.preference to retrieve.
-     * @return The {@link android.preference.Preference} with the key, or null.
+     * @return The {@link Preference} with the key, or null.
      * @see android.preference.PreferenceGroup#findPreference(CharSequence)
      */
     public Preference findPreference(CharSequence key) {

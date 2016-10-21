@@ -63,7 +63,7 @@
             tools:text="Well, i am the summary, douche!" />
     </RelativeLayout>
 
-    <!-- Preference should place its actual preference widget here. -->
+    <!-- Preference should place its actual org.namelessrom.devicecontrol.externalsources.preference widget here. -->
 
     <LinearLayout
         android:id="@android:id/widget_frame"

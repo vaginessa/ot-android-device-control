@@ -39,9 +39,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.balysv.materialmenu.MaterialMenuDrawable;
-
 import org.namelessrom.devicecontrol.activities.BaseActivity;
+import org.namelessrom.devicecontrol.externalsources.viewlibs.materialmenu.MaterialMenuDrawable;
 import org.namelessrom.devicecontrol.listeners.OnBackPressedListener;
 import org.namelessrom.devicecontrol.modules.about.AboutFragment;
 import org.namelessrom.devicecontrol.modules.appmanager.AppListFragment;

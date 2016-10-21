@@ -22,9 +22,9 @@ import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-import android.support.v4.preference.PreferenceFragment;
 
 import org.namelessrom.devicecontrol.R;
+import org.namelessrom.devicecontrol.externalsources.preference.PreferenceFragment;
 import org.namelessrom.devicecontrol.preferences.AwesomeEditTextPreference;
 import org.namelessrom.devicecontrol.preferences.AwesomeTogglePreference;
 import org.namelessrom.devicecontrol.preferences.CustomPreference;

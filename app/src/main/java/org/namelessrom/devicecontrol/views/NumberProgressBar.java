@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 
 import org.namelessrom.devicecontrol.theme.AppResources;
 
-public class NumberProgressBar extends com.daimajia.numberprogressbar.NumberProgressBar {
+public class NumberProgressBar extends org.namelessrom.devicecontrol.externalsources.viewlibs.numberprogressbar.NumberProgressBar {
     public NumberProgressBar(Context context) {
         super(context);
     }

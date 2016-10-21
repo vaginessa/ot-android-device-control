@@ -156,17 +156,6 @@
                 android:value="org.namelessrom.devicecontrol.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.DonationActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/donate_"
-            android:launchMode="singleTask"
-            android:parentActivityName=".MainActivity"
-            android:taskAffinity="">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.namelessrom.devicecontrol.MainActivity" />
-        </activity>
-        <activity
             android:name=".activities.RequestFileActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true"
@@ -207,39 +196,11 @@
         </activity>
         <!-- Device activities -->
         <activity
-            android:name=".modules.device.SensorActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/sensors"
-            android:launchMode="singleTask"
-            android:parentActivityName=".MainActivity"
-            android:taskAffinity="">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.namelessrom.devicecontrol.MainActivity" />
-        </activity>
-        <!-- Widget activities -->
-        <activity
-            android:name=".widgets.RebootWidget$RebootDialogActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/widget_power"
-            android:launchMode="singleInstance"
-            android:theme="@style/CustomDialog" />
-        <activity
             android:name=".activities.QuickActionActivity"
             android:excludeFromRecents="true"
             android:label="@string/quick_actions"
             android:launchMode="singleInstance"
             android:theme="@style/CustomDialog" />
-
-        <!-- Services -->
-        <service
-            android:name=".services.FstrimService"
-            android:enabled="true"
-            android:exported="false" />
-        <service
-            android:name=".services.BootupService"
-            android:enabled="true"
-            android:exported="false" />
 
         <!-- Broadcast Receivers -->
         <receiver android:name=".receivers.SecretCodeReceiver">

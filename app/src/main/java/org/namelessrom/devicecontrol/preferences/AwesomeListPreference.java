@@ -29,7 +29,7 @@ import timber.log.Timber;
 
 /**
  * Automatically handles reading to files to automatically set the value,
- * writing to files on preference change, even with multiple files,
+ * writing to files on org.namelessrom.devicecontrol.externalsources.preference change, even with multiple files,
  * handling bootup restoration.
  */
 public class AwesomeListPreference extends CustomListPreference {

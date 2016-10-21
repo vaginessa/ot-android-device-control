@@ -18,7 +18,6 @@
 package org.namelessrom.devicecontrol.modules.about;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -30,7 +29,6 @@ import android.widget.TextView;
 
 import org.namelessrom.devicecontrol.App;
 import org.namelessrom.devicecontrol.R;
-import org.namelessrom.devicecontrol.activities.DonationActivity;
 import org.namelessrom.devicecontrol.utils.DrawableHelper;
 
 public class WelcomeFragment extends Fragment {
@@ -51,17 +49,6 @@ public class WelcomeFragment extends Fragment {
             @Override public void onClick(View v) {
                 final Activity activity = getActivity();
                 ((App) activity.getApplicationContext()).getCustomTabsHelper().launchUrl(activity, URL_TRANSLATION);
-            }
-        });
-
-        final Drawable donateDrawable = DrawableHelper.getDrawable(R.drawable.ic_favorite_black_24dp);
-        final Button donateButton = (Button) view.findViewById(R.id.donateButton);
-        donateButton.setCompoundDrawablesWithIntrinsicBounds(
-                null, null, DrawableHelper.applyAccentColorFilter(donateDrawable), null);
-        donateButton.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                final Intent intent = new Intent(getActivity(), DonationActivity.class);
-                startActivity(intent);
             }
         });
 

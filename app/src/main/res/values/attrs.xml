@@ -20,7 +20,7 @@
     <attr name="themeColorInvert" format="reference|color" />
     <attr name="themeMenu" format="reference|color" />
     <attr name="themeMenuFooter" format="reference|color" />
-    <!-- awesome preference -->
+    <!-- awesome org.namelessrom.devicecontrol.externalsources.preference -->
     <declare-styleable name="AwesomePreference">
         <attr name="filePath" format="reference" />
         <attr name="filePathList" format="reference" />
@@ -31,7 +31,7 @@
         <attr name="valueChecked" format="string" />
         <attr name="valueNotChecked" format="string" />
     </declare-styleable>
-    <!-- seekbar preference -->
+    <!-- seekbar org.namelessrom.devicecontrol.externalsources.preference -->
     <declare-styleable name="SeekBarPreference">
         <attr name="min" format="integer" />
         <attr name="unitsLeft" format="string" />

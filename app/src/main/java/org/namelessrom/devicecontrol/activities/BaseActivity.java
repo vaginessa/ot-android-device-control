@@ -44,10 +44,9 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.balysv.materialmenu.MaterialMenuDrawable;
-import com.balysv.materialmenu.extras.toolbar.MaterialMenuIconToolbar;
-
 import org.namelessrom.devicecontrol.R;
+import org.namelessrom.devicecontrol.externalsources.viewlibs.materialmenu.MaterialMenuDrawable;
+import org.namelessrom.devicecontrol.externalsources.viewlibs.materialmenu.extras.toolbar.MaterialMenuIconToolbar;
 import org.namelessrom.devicecontrol.theme.AppResources;
 
 import java.util.ArrayList;
