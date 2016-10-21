@@ -25,7 +25,6 @@ android {
             minifyEnabled true
             shrinkResources true
             zipAlignEnabled true
-
             signingConfig signingConfigs.debug
         }
     }
