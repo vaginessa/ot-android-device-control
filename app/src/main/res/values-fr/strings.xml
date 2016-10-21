@@ -23,8 +23,6 @@
   <string name="message_loading">Chargement, veuillez patienter&#8230;</string>
   <string name="action_press_again">Appuyez de nouveau pour sortir!</string>
   <string name="dialog_warning">Avertissement!</string>
-  <string name="no_tweaks_available">Aucun réglage disponible</string>
-  <string name="no_tweaks_message">Désolé, mais votre appareil n\'a aucune fonctionnalité prise en charge</string>
   <string name="refresh">Actualiser</string>
   <string name="cold">Froid</string>
   <string name="enable">Activer</string>

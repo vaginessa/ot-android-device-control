@@ -19,8 +19,6 @@ package org.namelessrom.devicecontrol.listeners;
 
 public interface OnBackPressedListener {
 
-    boolean showBurger();
-
     boolean onBackPressed();
 
 }

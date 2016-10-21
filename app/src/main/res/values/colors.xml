@@ -48,5 +48,4 @@
     <color name="tab_color_normal">#b3ffffff</color>
     <color name="tab_color_selected">#ffffff</color>
 
-    <color name="text_shadow">#000</color>
 </resources>

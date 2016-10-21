@@ -17,7 +17,6 @@
  */
 package org.namelessrom.devicecontrol.activities;
 
-import android.app.Activity;
 import android.app.ActivityManager.TaskDescription;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -26,7 +25,6 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -45,8 +43,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import org.namelessrom.devicecontrol.R;
-import org.namelessrom.devicecontrol.externalsources.viewlibs.materialmenu.MaterialMenuDrawable;
-import org.namelessrom.devicecontrol.externalsources.viewlibs.materialmenu.extras.toolbar.MaterialMenuIconToolbar;
 import org.namelessrom.devicecontrol.theme.AppResources;
 
 import java.util.ArrayList;
@@ -55,16 +51,39 @@ import java.util.Collection;
 import timber.log.Timber;
 
 public abstract class BaseActivity extends AppCompatActivity {
-    private static final int REQ_PERMISSIONS = 1893;
-
     public static final String ACTION_REQUEST_PERMISSION = "action_request_permission";
     public static final String EXTRA_PERMISSIONS = "extra_permissions";
+    private static final int REQ_PERMISSIONS = 1893;
+    public final BroadcastReceiver mLocalBroadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Timber.d("Received intent: %s", intent);
+            if (intent == null) {
+                return;
+            }
+            final String action = intent.getAction();
+            if (TextUtils.isEmpty(action)) {
+                return;
+            }
 
-    protected MaterialMenuIconToolbar mMaterialMenu;
+            switch (action) {
+                case ACTION_REQUEST_PERMISSION: {
+                    final ArrayList<String> permissions = intent.getStringArrayListExtra(EXTRA_PERMISSIONS);
+                    if (permissions != null && permissions.size() > 0) {
+                        requestPermissions(permissions);
+                    }
+                    break;
+                }
+            }
+        }
+    };
+    public IntentFilter mLocalIntentFilter;
     protected NavigationView mNavigationView;
     protected MenuItem mPreviousMenuItem;
 
-    public IntentFilter mLocalIntentFilter;
+    public static boolean isGranted(Context context, String permission) {
+        return ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED;
+    }
 
     protected void setupToolbar() {
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -81,15 +100,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         final ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-    }
-
-    protected void setupMaterialMenu(Activity activity) {
-        mMaterialMenu = new MaterialMenuIconToolbar(activity, Color.WHITE, MaterialMenuDrawable.Stroke.THIN) {
-            @Override public int getToolbarViewId() { return R.id.toolbar; }
-        };
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            mMaterialMenu.setNeverDrawTouch(true);
         }
     }
 
@@ -126,15 +136,9 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override protected void onPostCreate(final Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        if (mMaterialMenu != null) {
-            mMaterialMenu.syncState(savedInstanceState);
-        }
     }
 
     @Override protected void onSaveInstanceState(final Bundle outState) {
-        if (mMaterialMenu != null) {
-            mMaterialMenu.onSaveInstanceState(outState);
-        }
         super.onSaveInstanceState(outState);
     }
 
@@ -176,10 +180,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         return isGranted(this, permission);
     }
 
-    public static boolean isGranted(Context context, String permission) {
-        return ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED;
-    }
-
     public void requestPermissions(Collection<String> permissions) {
         final String[] permissionsToRequest = permissions.toArray(new String[permissions.size()]);
         ActivityCompat.requestPermissions(this, permissionsToRequest, REQ_PERMISSIONS);
@@ -207,29 +207,6 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
-
-    public final BroadcastReceiver mLocalBroadcastReceiver = new BroadcastReceiver() {
-        @Override public void onReceive(Context context, Intent intent) {
-            Timber.d("Received intent: %s", intent);
-            if (intent == null) {
-                return;
-            }
-            final String action = intent.getAction();
-            if (TextUtils.isEmpty(action)) {
-                return;
-            }
-
-            switch (action) {
-                case ACTION_REQUEST_PERMISSION: {
-                    final ArrayList<String> permissions = intent.getStringArrayListExtra(EXTRA_PERMISSIONS);
-                    if (permissions != null && permissions.size() > 0) {
-                        requestPermissions(permissions);
-                    }
-                    break;
-                }
-            }
-        }
-    };
 
     public IntentFilter createIntentFilter() {
         if (mLocalIntentFilter == null) {

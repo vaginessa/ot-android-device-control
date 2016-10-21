@@ -27,8 +27,6 @@
   <string name="dialog_warning">¡Advertencia!</string>
   <string name="dialog_warning_su_version">El superusuario instalado \"%s\" es funcional pero quiza no pueda trabajar correctamente con Device Control, porque no lo he probado\nSi tiene algun problema, le recomiendo usar \"SuperSU\"!</string>
   <string name="dialog_action_never_show_again">No mostrar de nuevo</string>
-  <string name="no_tweaks_available">No hay ajustes disponibles</string>
-  <string name="no_tweaks_message">Lo siento, pero el dispositivo no tiene ninguna característica compatible</string>
   <string name="refresh">Refrescar</string>
   <string name="cold">Frío</string>
   <string name="enable">Habilitar</string>

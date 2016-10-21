@@ -23,8 +23,6 @@
   <string name="message_loading">Načítání, počkejte prosím...</string>
   <string name="action_press_again">Stiskněte znovu pro ukončení!</string>
   <string name="dialog_warning">Varování!</string>
-  <string name="no_tweaks_available">Žádné vylepšení k dispozici</string>
-  <string name="no_tweaks_message">Omlouváme se, ale vaše zařízení nemá žádné podporované funkce</string>
   <string name="refresh">Obnovení</string>
   <string name="cold">Studené</string>
   <string name="enable">Povolit</string>

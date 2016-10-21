@@ -24,8 +24,6 @@
   <string name="message_loading">Carregando, por favor, aguarde...</string>
   <string name="action_press_again">Pressione novamente para sair!</string>
   <string name="dialog_warning">Alerta!</string>
-  <string name="no_tweaks_available">Sem ajustes disponíveis</string>
-  <string name="no_tweaks_message">Desculpe, mas o seu dispositivo não tem nenhuma característica suportada</string>
   <string name="refresh">Atualizar</string>
   <string name="cold">Frio</string>
   <string name="enable">Habilitar</string>

@@ -24,8 +24,6 @@
   <string name="message_loading">加载中，请稍后&#8230;&#8230;</string>
   <string name="action_press_again">再按一次退出</string>
   <string name="dialog_warning">警告！</string>
-  <string name="no_tweaks_available">没有可用的调整</string>
-  <string name="no_tweaks_message">抱歉，您的设备不支持这些功能</string>
   <string name="refresh">刷新</string>
   <string name="cold">冷</string>
   <string name="enable">启用</string>

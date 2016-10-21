@@ -24,8 +24,6 @@
   <string name="message_loading">Учитавање, молимо сачекајте&#8230;</string>
   <string name="action_press_again">Притисните још једном за излаз!</string>
   <string name="dialog_warning">Упозорење!</string>
-  <string name="no_tweaks_available">Нема доступних подешавања</string>
-  <string name="no_tweaks_message">Нажалост, Ваш уређај нема ниједну подржану функцију</string>
   <string name="refresh">Оcвежи</string>
   <string name="cold">Хладно</string>
   <string name="enable">Омогући</string>

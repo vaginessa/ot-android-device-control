@@ -24,8 +24,6 @@
   <string name="message_loading">Загрузка, пожалуйста подождите&#8230;</string>
   <string name="action_press_again">Нажмите ещё раз для выхода!</string>
   <string name="dialog_warning">Внимание!</string>
-  <string name="no_tweaks_available">Нет доступных настроек</string>
-  <string name="no_tweaks_message">Извините, но ваше устройство не имеет ни одной поддерживаемой функции</string>
   <string name="refresh">Обновить</string>
   <string name="cold">Холодный</string>
   <string name="enable">Включить</string>

@@ -24,8 +24,6 @@
   <string name="message_loading">Laden, gelieve te wachten&#8230;</string>
   <string name="action_press_again">Druk nogmaals om af te sluiten!</string>
   <string name="dialog_warning">Waarschuwing!</string>
-  <string name="no_tweaks_available">Geen tweaks beschikbaar</string>
-  <string name="no_tweaks_message">Sorry, maar uw apparaat heeft geen ondersteunde functies</string>
   <string name="refresh">Vernieuwen</string>
   <string name="cold">Koud</string>
   <string name="enable">Inschakelen</string>

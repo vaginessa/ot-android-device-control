@@ -18,7 +18,6 @@
     <!-- Wizard -->
 
     <!-- Material menu -->
-    <dimen name="mm_up_arrow_margin">-16dp</dimen>
     <!-- support org.namelessrom.devicecontrol.externalsources.preference fragment -->
     <dimen name="preference_fragment_padding_bottom">0dp</dimen>
     <dimen name="preference_fragment_padding_side">16dp</dimen>

@@ -23,8 +23,6 @@
   <string name="message_loading">Trwa ładowanie, proszę czekać&#8230;</string>
   <string name="action_press_again">Naciśnij jeszcze raz aby wyjść!</string>
   <string name="dialog_warning">Uwaga!</string>
-  <string name="no_tweaks_available">Brak dostępnych ulepszeń</string>
-  <string name="no_tweaks_message">Przepraszamy, ale twoje urządzenie nie obsługuje żadnych funkcji</string>
   <string name="refresh">Odśwież</string>
   <string name="cold">Zimny</string>
   <string name="enable">Włącz</string>

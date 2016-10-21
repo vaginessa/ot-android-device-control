@@ -20,13 +20,5 @@ package org.namelessrom.devicecontrol;
 public class Constants {
     public static final String[] EMPTY_STRINGS = new String[0];
 
-    public static final String URL_DONATE_FLATTR =
-            "https://flattr.com/submit/auto?user_id=amartinz&url=https://github.com/Evisceration/DeviceControl&title=DeviceControl&language=en_GB&tags=github&category=software";
-    public static final String URL_DONATE_PAYPAL =
-            "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZSN2SW53JJQJY";
-    public static final String URL_GITHUB_BASE = "https://github.com/Evisceration";
-    public static final String URL_GITHUB_DC_COMMITS_BASE = URL_GITHUB_BASE + "/DeviceControl/commits/%s";
-    public static final String URL_SENSE360 = "http://sense360.com";
-
     public static final String KEY_LOW_END_GFX = "low_end_gfx";
 }

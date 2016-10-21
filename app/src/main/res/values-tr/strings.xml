@@ -28,8 +28,6 @@
     <string name="dialog_warning">Uyarı!</string>
     <string name="dialog_warning_su_version">Your installed superuser \"%s\" is functional but might not work reliable with Device Control, because I have not tested it.\nIf you encounter any problems, using \"SuperSU\" is recommended!</string>
   <string name="dialog_action_never_show_again">Tekrar Gösterme</string>
-    <string name="no_tweaks_available">Tweakler mevcut değil</string>
-  <string name="no_tweaks_message">Üzgünüm ama cihazınız desteklenen hiçbir özelliğe sahip değil</string>
   <string name="refresh">Yenile</string>
     <string name="cold">Soğuk</string>
     <string name="enable">Etkinleştir</string>

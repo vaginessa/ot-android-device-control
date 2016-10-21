@@ -23,8 +23,6 @@
   <string name="message_loading">Carregant, sisplau esperi&#8230;</string>
   <string name="action_press_again">Feu clic una vegada més per sortir!</string>
   <string name="dialog_warning">Perill!</string>
-  <string name="no_tweaks_available">No hi ha configuracións disponibles</string>
-  <string name="no_tweaks_message">Em sap greu, però el dispositiu no té cap característica compatible</string>
   <string name="refresh">Refrescar</string>
   <string name="cold">Fred</string>
   <string name="enable">Habilitar</string>

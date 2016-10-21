@@ -28,8 +28,6 @@
   <string name="dialog_warning">Achtung!</string>
   <string name="dialog_warning_su_version">Der installierte Superuser \"%s\" ist funktionsfähig, wurde aber mit Device Control nicht getestet und es können Fehler auftreten.\nFalls irgendwelche Probleme auftreten, wird die Verwendung von \"SuperSU\" empfohlen!</string>
   <string name="dialog_action_never_show_again">Nicht wieder zeigen</string>
-  <string name="no_tweaks_available">Keine Optimierungen verfügbar</string>
-  <string name="no_tweaks_message">Tut mir leid, aber das Gerät unterstützt keine dieser Funktionen</string>
   <string name="refresh">Aktualisieren</string>
   <string name="cold">Kalt</string>
   <string name="enable">Aktivieren</string>

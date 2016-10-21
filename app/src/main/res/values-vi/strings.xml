@@ -23,8 +23,6 @@
   <string name="message_loading">Đang tải, vui lòng đợi&#8230;</string>
   <string name="action_press_again">Ấn thêm lần nữa để thoát!</string>
   <string name="dialog_warning">Chú ý!</string>
-  <string name="no_tweaks_available">Không có tùy chỉnh nào</string>
-  <string name="no_tweaks_message">Xin lỗi, thiết bị của bạn không hỗ trợ tính năng nào</string>
   <string name="refresh">Làm mới</string>
   <string name="cold">Lạnh</string>
   <string name="enable">Bật</string>

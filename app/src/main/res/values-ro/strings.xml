@@ -23,8 +23,6 @@
   <string name="message_loading">Se încarcă, va rugăm așteptați&#8230;</string>
   <string name="action_press_again">Apăsaţi din nou pentru a ieşi!</string>
   <string name="dialog_warning">Atenție!</string>
-  <string name="no_tweaks_available">Nicio setare disponibilă</string>
-  <string name="no_tweaks_message">Ne pare rau, dar aparatul nu are nici o caracteristica disponibila</string>
   <string name="refresh">Reîmprospătare</string>
   <string name="cold">Rece</string>
   <string name="enable">Activați</string>

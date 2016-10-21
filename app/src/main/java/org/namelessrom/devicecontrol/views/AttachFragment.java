@@ -75,13 +75,6 @@ public abstract class AttachFragment extends Fragment implements OnBackPressedLi
         return super.onCreateAnimation(transit, enter, nextAnim);
     }
 
-    /*
-         * whether we should show the burger on a back action.
-         * defaults to true, set to false to show an arrow
-         * possible use case when to set it to false: sub fragment navigation
-         */
-    @Override public boolean showBurger() { return true; }
-
     @Override public boolean onBackPressed() { return false; }
 
     @Nullable public final BaseActivity getBaseActivity() {

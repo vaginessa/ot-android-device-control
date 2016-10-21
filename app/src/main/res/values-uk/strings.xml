@@ -23,8 +23,6 @@
   <string name="message_loading">Завантаження, зачекайте&#8230;</string>
   <string name="action_press_again">Натисніть ще раз щоб вийти.</string>
   <string name="dialog_warning">Увага!</string>
-  <string name="no_tweaks_available">Немає доступних \"твіків\"</string>
-  <string name="no_tweaks_message">Вибачте, але ваш пристрій не має жодних підтримуваних фіч</string>
   <string name="refresh">Оновити</string>
   <string name="cold">Холодний</string>
   <string name="enable">Увімкнення</string>

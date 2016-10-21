@@ -21,8 +21,6 @@
   <string name="message_loading">Laddar, vänta...</string>
   <string name="action_press_again">Tryck igen för att avsluta!</string>
   <string name="dialog_warning">Varning!</string>
-  <string name="no_tweaks_available">Inga tweaks tillgänglig</string>
-  <string name="no_tweaks_message">Ledsen men din enhet har inte alla funktioner som stöds</string>
   <string name="home">Hem</string>
   <string name="app_manager">App hanterare</string>
   <string name="refresh">Uppdatera</string>
